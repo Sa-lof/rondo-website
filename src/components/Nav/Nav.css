@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 700;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 35px;
+  padding-left: 35px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.logo {
+  max-width: 100px; /* Adjust based on your logo's size */
+  height: auto;
+}
+
+.menu-btn {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+
+.menu-btn span,
+.menu-btn:before,
+.menu-btn:after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 2px;
+  background-color: #000; /* Initially black */
+  transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.menu-btn:before {
+  top: calc(50% - 10px);
+}
+
+.menu-btn:after {
+  top: calc(50% + 8px);
+}
+
+/* When the menu is active, change the color to white */
+#active:checked + .navbar .menu-btn:before,
+#active:checked + .navbar .menu-btn:after {
+  background-color: #fff; /* Change to white */
+  transform: translateY(0) rotate(45deg);
+  top: initial;
+}
+
+#active:checked + .navbar .menu-btn:after {
+  transform: translateY(0) rotate(-45deg);
+  top: initial;
+}
+
+#active:checked + .navbar .menu-btn span {
+  background-color: #fff; /* Ensure the middle span is also white if visible */
+  transform: scale(0);
+}
+
+.wrapper {
+  /* Initial state: hidden off-screen */
+  visibility: hidden; /* Use visibility to hide but still occupy space for initial state */
+  opacity: 0; /* Start fully transparent */
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: -100%; /* Start off the right side of the screen */
+  height: 100%;
+  width: 100%;
+  background: #000;
+  transition: opacity 0.6s ease-in-out, right 0.6s ease-in-out, visibility 0.6s;
+  display: flex;
+}
+
+#active:checked ~ .wrapper {
+  visibility: visible; /* Make the wrapper visible */
+  opacity: 1; /* Fade in to fully opaque */
+  right: 0; /* Move into view */
+  display: flex;
+}
+
+.wrapper ul {
+  list-style: none;
+  text-align: center;
+}
+
+.wrapper ul li {
+  margin: 40px 0;
+}
+
+.wrapper ul li a {
+  text-decoration: none;
+  font-size: 30px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.wrapper ul li a:hover {
+  color: lightgray;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #202020;
+}
+
+.content .title {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.content p {
+  font-size: 35px;
+  font-weight: 600;
+}
