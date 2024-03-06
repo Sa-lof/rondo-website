@@ -25,7 +25,6 @@ function Cine() {
   ];
 
   const settings = {
-    dots: true,
     infinite: true,
     speed: 500, 
     autoplay: true,
@@ -62,8 +61,8 @@ function Cine() {
   return (
     <ThemeProvider theme={theme}>
       <Nav />
-      <Box sx={{ width: "100vw", boxSizing: "border-box", minHeight: "50vh", marginBottom: 10 }}>
-        <Grid container spacing={0} sx={{ minHeight: "50vh" }}>
+      <Box sx={{ width: "100vw", boxSizing: "border-box", minHeight: "50vh", marginBottom: 5, paddingTop: 7}}>
+        <Grid container spacing={0} sx={{ minHeight: "50vh"}}>
           <Grid item xs={12} md={4}>
             <Box
               sx={{
@@ -71,7 +70,7 @@ function Cine() {
                 justifyContent: "center",
                 alignItems: "center",
                 padding: 2,
-                height: "100%",
+                height: "80%",
               }}
             >
               <img
@@ -88,7 +87,7 @@ function Cine() {
           <Grid item xs={12} md={8}>
             <Box
               sx={{
-                height: "100%",
+                height: "80%",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
@@ -102,10 +101,10 @@ function Cine() {
                 sx={{
                   marginBottom: "20px",
                   fontSize: {
-                    xs: "48px",
-                    sm: "72px",
-                    md: "96px",
-                    lg: "134px",
+                    xs: "28px",
+                    sm: "52px",
+                    md: "76px",
+                    lg: "114px",
                   },
                   fontWeight: "bold",
                 }}
@@ -116,10 +115,10 @@ function Cine() {
                 variant="subtitle1"
                 sx={{
                   fontSize: {
-                    xs: "20px", 
-                    sm: "30px",
-                    md: "40px",
-                    lg: "64px",
+                    xs: "5px", 
+                    sm: "15px",
+                    md: "25px",
+                    lg: "49px",
                   },
                 }}
               >
@@ -128,10 +127,17 @@ function Cine() {
             </Box>
           </Grid>
         </Grid>
-        <Box sx={{ flexGrow: 1, overflow: "hidden", paddingTop: 5}}>
+        <Box sx={{
+          flexGrow: 1, 
+          overflow: "hidden", 
+          borderTop: "2px solid black",
+          borderBottom: "2px solid black",
+          paddingBottom: 3,
+          paddingTop: 3,
+        }}>
           <Slider {...settings}>
             {movieTitles.map((title, index) => (
-              <Box key={index} sx={{ textAlign: "center", padding: "20px" }}>
+              <Box key={index} sx={{ textAlign: "center"}}>
                 <Typography variant="h6" component="h2">
                   {title}
                 </Typography>
