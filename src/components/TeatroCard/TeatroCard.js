@@ -7,19 +7,19 @@ import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline'; 
 
-function MovieCard() {
+function TeatroCard() {
     const [selectedImage, setSelectedImage] = useState("https://cdn.pixabay.com/photo/2017/01/25/17/35/picture-2008484_1280.png");
     const [hover, setHover] = useState(false);
-
+    
     const smallImages = [
         "https://img.asmedia.epimg.net/resizer/UzT6yeOIk7P6R1Nwx31_wWi5lcU=/360x203/cloudfront-eu-central-1.images.arcpublishing.com/diarioas/Z5JQ6IIK25PZZOGLPNYW7TNW3Y.jpg",
-        "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/713EAC98B3CEC6A774A84243AD1FA532576F243B8A152FEA0C03C4E32BBFE018/scale?width=1200&amp;aspectRatio=1.78&amp;format=webp",
+        "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/713EAC98B3CEC6A774A84243AD1FA532576F243B8A152FEA0C03C4E32BBFE018/scale?width=1200&aspectRatio=1.78&format=webp",
         "https://www.lavanguardia.com/files/image_449_220/files/fp/uploads/2023/02/07/63e26dd00be55.r_d.589-392.jpeg"
     ];
 
     return (  
-        <Grid container>
-          <Grid item xs={12}>
+        <Grid container spacing={2} justifyContent="center">
+            <Grid item xs={8} sm={10} lg={7} md={7}>
             <Card
               onMouseEnter={() => setHover(true)} 
               onMouseLeave={() => setHover(false)} 
@@ -62,36 +62,63 @@ function MovieCard() {
                 </Grid>
               )}
             </Card>
-          </Grid>
-  
-          <Grid item container xs={12} alignItems="center" justifyContent="space-between" paddingTop={2} paddingBottom={2}>
-            <Grid item xs={5}>
-              <Typography gutterBottom variant="h5" component="div" marginLeft={2}
-              sx={{
-                marginBottom: "20px",
-                fontSize: "35px",
-                fontWeight: "bold",
-              }}>
-                4 minutos
-              </Typography>
             </Grid>
-  
-            <Grid item container xs={7} spacing={2} justifyContent="flex-end">
+
+            <Grid item xs={4} sm={2} lg={1} md={1} container direction="column" justifyContent="center" alignItems="center">
                 {smallImages.map((image, index) => (
-                    <Grid item key={index}>
-                    <CardMedia
-                        component="img"
-                        style={{ height: '80px', width: '80px', borderRadius: '10px' }} 
-                        image={image}
-                        alt={`Small Image ${index + 1}`}
+                    <img
+                        key={index}
+                        src={image}
+                        alt={`Thumbnail ${index + 1}`}
+                        style={{ height: '95px', width: '95px', padding: '5px', borderRadius: '10px'}} 
                         onClick={() => setSelectedImage(image)}
                     />
-                    </Grid>
                 ))}
             </Grid>
-          </Grid>
+            <Grid item xs={12} sm={12} lg={3} md={3} container direction="column" justifyContent="center" alignItems="center" sx={{ borderTop: '2px solid black',  marginTop: {
+        xs: '30px',
+        sm: '30px',
+        md: '0px',
+        lg: '0px'
+    }, marginLeft:{
+        xs: '0px',
+        sm: '0px',
+        md: '30px',
+        lg: '30px'
+    }}}>
+                <Typography variant="body1" display="block" gutterBottom>
+                    AÑO
+                </Typography>
+                <Typography variant="h3" display="block" gutterBottom sx={{
+                            marginBottom: "20px",
+                            fontSize: {
+                                xs: "13px",
+                                sm: "25px",
+                                md: "35px",
+                                lg: "50px",
+                            },
+                            fontWeight: "bold",
+                            }}>
+                    2020
+                </Typography>
+                <Typography variant="body1" display="block" gutterBottom>
+                    DURACIÓN
+                </Typography>
+                <Typography variant="h3" display="block" gutterBottom sx={{
+                            marginBottom: "20px",
+                            fontSize: {
+                                xs: "13px",
+                                sm: "25px",
+                                md: "35px",
+                                lg: "50px",
+                            },
+                            fontWeight: "bold",
+                            }}>
+                    4 min
+                </Typography>
+            </Grid>
         </Grid>
     );
 }
   
-export default MovieCard;
+export default TeatroCard;

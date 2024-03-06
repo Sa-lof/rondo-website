@@ -38,7 +38,6 @@ function Cine() {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true
         }
       },
       {
@@ -147,7 +146,7 @@ function Cine() {
         </Box>
         <Grid container spacing={5} sx={{ marginTop: 4, padding: 5 }}>
           {[...Array(6)].map((_, index) => (
-            <Grid item xs={12} sm={12} md={6} key={index}>
+            <Grid item xs={12} sm={12} md={12} lg={6} key={index}>
               <CineCard />
             </Grid>
           ))}
