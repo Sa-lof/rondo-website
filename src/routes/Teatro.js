@@ -10,7 +10,7 @@ import TeatroCard from "../components/TeatroCard/TeatroCard";
 
 const theme = createTheme({
     typography: {
-      fontFamily: ["Arimo", "sans-serif"].join(","),
+      fontFamily: ["Sono", "monospace"].join(","),
     },
   });
 function Teatro() {

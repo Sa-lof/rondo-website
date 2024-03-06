@@ -26,84 +26,77 @@ const SkillsBanner = () => {
   return (
     <Box
       sx={{
-        width: "100vw",
+        width: "100%",
         boxSizing: "border-box",
         marginBottom: 10,
+        padding: { xs: 2, md: 3 },
       }}
     >
-      <Grid
-        container
-        alignItems="center"
-        style={{ width: "100%", margin: 0, padding: 3 }}
-      >
-        <Grid item xs={12} sm={6} sx={{ padding: 0 }}>
+      <Grid container alignItems="center" spacing={2}>
+        <Grid item xs={12} md={6}>
           <Box
             sx={{
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              padding: 2,
               height: "100%",
             }}
           >
-            <img
-              src={SkillsBannerPlaceholder}
-              alt="Sills banner"
-              style={{
+            <Box
+              component="img"
+              sx={{
                 maxWidth: "100%",
                 objectFit: "cover",
-                height: "100%",
+                maxHeight: { xs: "30vh", sm: "40vh", md: "50vh" }, // Adjust the value as needed
               }}
+              src={SkillsBannerPlaceholder}
+              alt="Objective banner"
             />
           </Box>
         </Grid>
-        <Grid item xs={12} sm={6} sx={{ padding: 3 }}>
-          <Box textAlign={"justify"} padding={0}>
+        <Grid item xs={12} md={6}>
+          <Box textAlign="justify" padding={{ xs: 2, md: 3 }}>
             <Typography
-              variant="h2"
-              component="h2"
+              variant="h3"
               gutterBottom
-              fontWeight={"bold"}
-              fontSize={"64px"}
+              sx={{
+                fontWeight: "bold",
+                fontSize: { xs: "2rem", md: "3rem" },
+                textAlign: { xs: "center", md: "left" },
+                marginBottom: { xs: 2, md: 4 },
+              }}
             >
               Nuestras Habilidades
             </Typography>
             {skills.map((skill, index) => (
-              <Box key={index} sx={{ marginBottom: "3rem" }}>
+              <Box key={index} marginBottom={4}>
                 <Typography
                   variant="h5"
                   sx={{
                     fontWeight: "bold",
-                    textTransform: "uppercase",
-                    marginTop: "2rem",
+                    fontSize: { xs: "1.5rem", md: "2rem" },
+                    textAlign: { xs: "center", md: "left" },
+                    marginBottom: 1,
                   }}
                 >
                   {skill.title}
                 </Typography>
-                <hr
-                  style={{
-                    borderTop: "1px solid black",
-                    marginTop: "1rem",
-                    marginBottom: "1rem",
-                  }}
-                ></hr>
                 <Typography
-                  variant="body"
                   sx={{
-                    textTransform: "uppercase",
-                    textAlign: "justify",
                     color: "#5A656D",
+                    fontSize: { xs: "1rem", md: "1.25rem" },
+                    textAlign: { xs: "center", md: "left" },
                   }}
                 >
                   {skill.description}
                 </Typography>
-                <hr
-                  style={{
-                    borderTop: "1px solid black",
-                    marginTop: "1rem",
-                    marginBottom: "1rem",
+                <Box
+                  sx={{
+                    height: "2px",
+                    backgroundColor: "black",
+                    marginY: 2, // Creates space above and below the line
                   }}
-                ></hr>
+                />
               </Box>
             ))}
           </Box>

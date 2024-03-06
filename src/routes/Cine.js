@@ -10,10 +10,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const theme = createTheme({
-  typography: {
-    fontFamily: ["Arimo", "sans-serif"].join(","),
-  },
-});
+
+    typography: {
+      fontFamily: ["Sono", "monospace"].join(","),
+    },
+  });
 
 function Cine() {
   const movieTitles = [
