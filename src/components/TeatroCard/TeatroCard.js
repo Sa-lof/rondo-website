@@ -10,7 +10,7 @@ import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 function TeatroCard() {
     const [selectedImage, setSelectedImage] = useState("https://cdn.pixabay.com/photo/2017/01/25/17/35/picture-2008484_1280.png");
     const [hover, setHover] = useState(false);
-    
+
     const smallImages = [
         "https://img.asmedia.epimg.net/resizer/UzT6yeOIk7P6R1Nwx31_wWi5lcU=/360x203/cloudfront-eu-central-1.images.arcpublishing.com/diarioas/Z5JQ6IIK25PZZOGLPNYW7TNW3Y.jpg",
         "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/713EAC98B3CEC6A774A84243AD1FA532576F243B8A152FEA0C03C4E32BBFE018/scale?width=1200&aspectRatio=1.78&format=webp",
@@ -92,9 +92,9 @@ function TeatroCard() {
                 <Typography variant="h3" display="block" gutterBottom sx={{
                             marginBottom: "20px",
                             fontSize: {
-                                xs: "13px",
-                                sm: "25px",
-                                md: "35px",
+                                xs: "23px",
+                                sm: "35px",
+                                md: "45px",
                                 lg: "50px",
                             },
                             fontWeight: "bold",
@@ -107,9 +107,9 @@ function TeatroCard() {
                 <Typography variant="h3" display="block" gutterBottom sx={{
                             marginBottom: "20px",
                             fontSize: {
-                                xs: "13px",
-                                sm: "25px",
-                                md: "35px",
+                                xs: "23px",
+                                sm: "35px",
+                                md: "45px",
                                 lg: "50px",
                             },
                             fontWeight: "bold",

@@ -65,18 +65,31 @@ function MovieCard() {
           </Grid>
   
           <Grid item container xs={12} alignItems="center" justifyContent="space-between" paddingTop={2} paddingBottom={2}>
-            <Grid item xs={5}>
-              <Typography gutterBottom variant="h5" component="div" marginLeft={2}
+            <Grid item xs={12} lg={5} md={5} sm={5}>
+              <Typography gutterBottom variant="h5" component="div"
               sx={{
                 marginBottom: "20px",
                 fontSize: "35px",
                 fontWeight: "bold",
+                marginLeft: {
+                    xs: 0, 
+                    sm: 2,
+                    md: 2,
+                    lg: 2,
+                  }
               }}>
                 4 minutos
               </Typography>
             </Grid>
   
-            <Grid item container xs={7} spacing={2} justifyContent="flex-end">
+            <Grid item container xs={12} lg={7} md={7} sm={7} spacing={2} sx={{
+                  justifyContent: {
+                    xs: "center", 
+                    sm: "flex-end",
+                    md: "flex-end",
+                    lg: "flex-end",
+                  }
+                }}>
                 {smallImages.map((image, index) => (
                     <Grid item key={index}>
                     <CardMedia

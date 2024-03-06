@@ -36,9 +36,9 @@ function Teatro() {
                 sx={{
                   marginBottom: "20px",
                   fontSize: {
-                    xs: "28px",
-                    sm: "52px",
-                    md: "76px",
+                    xs: "53px",
+                    sm: "77px",
+                    md: "86px",
                     lg: "114px",
                   },
                   fontWeight: "bold",
@@ -50,9 +50,9 @@ function Teatro() {
                 variant="subtitle1"
                 sx={{
                   fontSize: {
-                    xs: "5px", 
-                    sm: "15px",
-                    md: "25px",
+                    xs: "30px", 
+                    sm: "40px",
+                    md: "35px",
                     lg: "49px",
                   },
                 }}
