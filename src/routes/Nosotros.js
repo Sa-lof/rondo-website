@@ -5,12 +5,12 @@ import AboutBanner from "../components/AboutBanner/AboutBanner";
 import ObjectiveBanner from "../components/ObjectiveBanner/ObjectiveBanner";
 import SkillsBanner from "../components/SkillsBanner/SkillsBanner";
 import Team from "../components/Team/Team";
-import AboutBannerImage from "../components/AboutBannerImage/AboutBannerImage";
 import ContactBanner from "../components/ContactBanner/ContactBanner";
+import Footer from "../components/Footer/Footer";
 
 const theme = createTheme({
   typography: {
-    fontFamily: ["Arimo", "sans-serif"].join(","),
+    fontFamily: ["Sono", "monospace"].join(","),
   },
 });
 function Nosotros() {
@@ -21,8 +21,8 @@ function Nosotros() {
       <ObjectiveBanner />
       <SkillsBanner />
       <Team />
-      <AboutBannerImage />
       <ContactBanner />
+      <Footer />
     </ThemeProvider>
   );
 }
