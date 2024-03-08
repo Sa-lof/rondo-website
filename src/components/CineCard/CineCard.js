@@ -71,12 +71,12 @@ function MovieCard() {
                 marginBottom: "20px",
                 fontSize: "35px",
                 fontWeight: "bold",
-                marginLeft: {
-                    xs: 0, 
-                    sm: 2,
-                    md: 2,
-                    lg: 2,
-                  }
+                textAlign: {
+                    xs: "center", 
+                    sm: "left",  
+                    md: "left", 
+                    lg: "left",
+                  },
               }}>
                 4 minutos
               </Typography>

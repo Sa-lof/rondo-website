@@ -18,28 +18,43 @@ function Teatro() {
     <ThemeProvider theme={theme}>
       <Nav />
       <Box sx={{ width: "100vw", boxSizing: "border-box", minHeight: "50vh", marginBottom: 5, paddingTop: 0}}>
-        <Grid container spacing={0} sx={{ minHeight: "50vh"}}>
+        <Grid container spacing={0} sx={{ minHeight: {
+                  xs: "25vh",
+                  sm: "30vh",
+                  md: "35vh",
+                  lg: "39vh",
+                },}}>
           <Grid item xs={12} md={12}>
             <Box
               sx={{
-                height: "80%",
+                height: {
+                  xs: "65%",
+                  sm: "70%",
+                  md: "80%",
+                  lg: "80%",
+                },
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
                 textAlign: "center",
                 padding: 2,
+                paddingTop: {
+                  xs: 10,
+                  sm: 8,
+                  md: 6,
+                  lg: 4,
+                }
               }}
             >
               <Typography
                 variant="h1"
                 gutterBottom
                 sx={{
-                  marginBottom: "20px",
                   fontSize: {
-                    xs: "53px",
-                    sm: "77px",
-                    md: "86px",
-                    lg: "114px",
+                    xs: "30px",
+                    sm: "40px",
+                    md: "50px",
+                    lg: "64px",
                   },
                   fontWeight: "bold",
                 }}
@@ -50,10 +65,10 @@ function Teatro() {
                 variant="subtitle1"
                 sx={{
                   fontSize: {
-                    xs: "30px", 
-                    sm: "40px",
-                    md: "35px",
-                    lg: "49px",
+                    xs: "18px", 
+                    sm: "20px",
+                    md: "22px",
+                    lg: "24px",
                   },
                 }}
               >
