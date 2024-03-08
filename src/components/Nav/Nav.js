@@ -25,15 +25,16 @@ function Nav() {
       </div>
       <label htmlFor="active" className="close"></label>
       <div className={`wrapper ${isActive ? "active" : ""}`}>
-        <ul>
-          <li><a href="/" onClick={toggleMenu}>Inicio</a></li>
-          <li><a href="/nosotros" onClick={toggleMenu}>Nosotros</a></li>
-          <li><a href="/cine" onClick={toggleMenu}>Cine</a></li>
-          <li><a href="/teatro" onClick={toggleMenu}>Teatro</a></li>
-          <li><a href="/servicios" onClick={toggleMenu}>Servicios</a></li>
-          <li><a href="/contacto" onClick={toggleMenu}>Contacto</a></li>
-        </ul>
-      </div>
+      {isActive && <label htmlFor="active" className="close">&#10006;</label>} {/* Close button */}
+      <ul>
+        <li><a href="/" onClick={toggleMenu}>Inicio</a></li>
+        <li><a href="/nosotros" onClick={toggleMenu}>Nosotros</a></li>
+        <li><a href="/cine" onClick={toggleMenu}>Cine</a></li>
+        <li><a href="/teatro" onClick={toggleMenu}>Teatro</a></li>
+        <li><a href="/servicios" onClick={toggleMenu}>Servicios</a></li>
+        <li><a href="/contacto" onClick={toggleMenu}>Contacto</a></li>
+      </ul>
+    </div>
     </>
   );
 }
