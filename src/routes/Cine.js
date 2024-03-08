@@ -62,7 +62,7 @@ function Cine() {
     <ThemeProvider theme={theme}>
       <Nav />
       <Box sx={{ width: "100vw", boxSizing: "border-box", minHeight: "50vh", marginBottom: 5, paddingTop: 7}}>
-        <Grid container spacing={0} sx={{ minHeight: "50vh"}}>
+        <Grid container spacing={0} sx={{ minHeight: "45vh"}}>
           <Grid item xs={12} md={4}>
             <Box
               sx={{
@@ -70,7 +70,25 @@ function Cine() {
                 justifyContent: "center",
                 alignItems: "center",
                 padding: 2,
-                height: "80%",
+                height: {
+                  xs: "90%",
+                  sm: "95%",
+                  md: "80%",
+                  lg: "80%",
+                },
+                width: {
+                  xs: "60%",
+                  sm: "60%",
+                  md: "80%",
+                  lg: "85%",
+                },
+                margin: "0 auto",
+                paddingBottom: {
+                  xs: 7,
+                  sm: 8,
+                  md: 8,
+                  lg: 4,
+                }
               }}
             >
               <img
@@ -79,15 +97,26 @@ function Cine() {
                 style={{
                   maxWidth: "100%",
                   objectFit: "cover",
-                  height: "100%",
+                  maxHeight: "100%",
                 }}
               />
             </Box>
           </Grid>
-          <Grid item xs={12} md={8}>
+
+          <Grid item xs={12} md={8} sx={{paddingBottom: {
+        xs: 3,
+        sm: 4,
+        md: 5,
+        lg: 4,
+      }}}>
             <Box
               sx={{
-                height: "80%",
+                height: {
+                  xs: "65%",
+                  sm: "70%",
+                  md: "80%",
+                  lg: "80%",
+                },
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
@@ -99,12 +128,12 @@ function Cine() {
                 variant="h1"
                 gutterBottom
                 sx={{
-                  marginBottom: "20px",
+
                   fontSize: {
-                    xs: "53px",
-                    sm: "77px",
-                    md: "86px",
-                    lg: "114px",
+                    xs: "30px",
+                    sm: "40px",
+                    md: "50px",
+                    lg: "64px",
                   },
                   fontWeight: "bold",
                 }}
@@ -115,10 +144,10 @@ function Cine() {
                 variant="subtitle1"
                 sx={{
                   fontSize: {
-                    xs: "30px", 
-                    sm: "40px",
-                    md: "35px",
-                    lg: "49px",
+                    xs: "18px", 
+                    sm: "20px",
+                    md: "22px",
+                    lg: "24px",
                   },
                 }}
               >
