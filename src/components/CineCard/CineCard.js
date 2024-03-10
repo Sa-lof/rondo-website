@@ -17,7 +17,7 @@ function MovieCard({ title, duration, mainImage, smallImages, onClick }) { // AÃ
             <Card
               onMouseEnter={() => setHover(true)} 
               onMouseLeave={() => setHover(false)} 
-              sx={{ position: 'relative', width: 1, height: 280, boxShadow: 3}}
+              sx={{ position: 'relative', width: 1, height: 280, boxShadow: 15}}
             >
               <CardMedia
                 component="img"
@@ -73,7 +73,7 @@ function MovieCard({ title, duration, mainImage, smallImages, onClick }) { // AÃ
                     lg: "left",
                   },
               }}>
-                {duration} minutos
+                {duration}
               </Typography>
             </Grid>
 
