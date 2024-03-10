@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Nav.css"; // Ensure the CSS path is correct
+import logoImage from '../../assets/logos/LOGO_B.PNG';
 
 function Nav() {
   const [isActive, setIsActive] = useState(false);
@@ -18,7 +19,7 @@ function Nav() {
         style={{ display: "none" }}
       />
       <div className="navbar">
-        <img src="path/to/your/logo.png" alt="Logo" className="logo" />
+        <img src={logoImage} alt="Logo" className="logo" />
         <label htmlFor="active" className="menu-btn">
           <span></span>
         </label>
