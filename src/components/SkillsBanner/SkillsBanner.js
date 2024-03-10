@@ -64,6 +64,7 @@ const SkillsBanner = () => {
                 fontWeight: "bold",
                 fontSize: { xs: "2rem", md: "3rem" },
                 textAlign: { xs: "center", md: "left" },
+                paddingBottom:{xs: 6, md: 0},
                 marginBottom: { xs: 2, md: 4 },
               }}
             >
@@ -95,7 +96,7 @@ const SkillsBanner = () => {
                   sx={{
                     height: "2px",
                     backgroundColor: "black",
-                    marginY: 2, // Creates space above and below the line
+                    marginY: 2,
                   }}
                 />
               </Box>
