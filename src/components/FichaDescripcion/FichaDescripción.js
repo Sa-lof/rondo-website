@@ -1,7 +1,8 @@
 import React from 'react';
 import { Paper, Grid, Typography } from '@mui/material';
 
-function FichaDecripcion() {
+function FichaDecripcion(props) {
+    const {duracion, dirigida, ano, idioma, cast, genero } = props;
   return (
     <Paper elevation={0} style={{ padding: 10, margin: 40, borderBottom: '1px solid black' }}>
         <Grid container spacing={5}>
@@ -15,11 +16,11 @@ function FichaDecripcion() {
                                 xs: "23px",
                                 sm: "30px",
                                 md: "40px",
-                                lg: "45px",
+                                lg: "40px",
                             },
                             fontWeight: "bold",
                             }}>
-                    Omar Drioli
+                   {dirigida}
             </Typography>
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
@@ -32,11 +33,11 @@ function FichaDecripcion() {
                                 xs: "23px",
                                 sm: "30px",
                                 md: "40px",
-                                lg: "45px",
+                                lg: "40px",
                             },
                             fontWeight: "bold",
                             }}>
-                    2021
+                    {ano}
                 </Typography>
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
@@ -49,11 +50,11 @@ function FichaDecripcion() {
                                 xs: "23px",
                                 sm: "30px",
                                 md: "40px",
-                                lg: "45px",
+                                lg: "40px",
                             },
                             fontWeight: "bold",
                             }}>
-                    4 min
+                    {duracion}
                 </Typography>
           </Grid>
           <Grid item xs={12} sm={12} md={3}>
@@ -66,11 +67,11 @@ function FichaDecripcion() {
                                 xs: "23px",
                                 sm: "30px",
                                 md: "40px",
-                                lg: "45px",
+                                lg: "40px",
                             },
                             fontWeight: "bold",
                             }}>
-                    Español
+                    {idioma}
                 </Typography>
           </Grid>
           <Grid item xs={12} sm={12} md={6}>
@@ -78,34 +79,22 @@ function FichaDecripcion() {
               CAST
             </Typography>
             <Grid container spacing={1}>
-              <Grid item xs={12} sm={12} md={12}>
-              <Typography variant="h3" display="block" gutterBottom sx={{
-                            marginBottom: "20px",
-                            fontSize: {
-                                xs: "23px",
-                                sm: "30px",
-                                md: "40px",
-                                lg: "45px",
-                            },
-                            fontWeight: "bold",
-                            }}>
-                    Analú Flores
+            {cast?.map((castMember, index) => (
+              <Grid item key={index} xs={12} sm={12} md={12}>
+                <Typography variant="h3" display="block" gutterBottom sx={{
+                  marginBottom: "20px",
+                  fontSize: {
+                    xs: "23px",
+                    sm: "30px",
+                    md: "40px",
+                    lg: "40px",
+                  },
+                  fontWeight: "bold",
+                }}>
+                  {castMember}
                 </Typography>
               </Grid>
-              <Grid item xs={12} sm={12} md={12}>
-              <Typography variant="h3" display="block" gutterBottom sx={{
-                            marginBottom: "20px",
-                            fontSize: {
-                                xs: "23px",
-                                sm: "30px",
-                                md: "40px",
-                                lg: "45px",
-                            },
-                            fontWeight: "bold",
-                            }}>
-                    Santiago Bautista
-                </Typography>
-              </Grid>
+            ))}
             </Grid>
           </Grid>
           <Grid item xs={12} sm={12} md={6}>
@@ -113,48 +102,22 @@ function FichaDecripcion() {
               GÉNERO
             </Typography>
             <Grid container spacing={1}>
-              <Grid item xs={6} sm={6} md={6}>
-              <Typography variant="h3" display="block" gutterBottom sx={{
-                            marginBottom: "20px",
-                            fontSize: {
-                                xs: "23px",
-                                sm: "30px",
-                                md: "40px",
-                                lg: "45px",
-                            },
-                            fontWeight: "bold",
-                            }}>
-                   Drama
+            {genero?.map((genre, index) => (
+              <Grid item key={index} xs={6} sm={6} md={6}>
+                <Typography variant="h3" display="block" gutterBottom sx={{
+                  marginBottom: "20px",
+                  fontSize: {
+                    xs: "23px",
+                    sm: "30px",
+                    md: "40px",
+                    lg: "40px",
+                  },
+                  fontWeight: "bold",
+                }}>
+                  {genre}
                 </Typography>
               </Grid>
-              <Grid item xs={6} sm={6} md={6}>
-              <Typography variant="h3" display="block" gutterBottom sx={{
-                            marginBottom: "20px",
-                            fontSize: {
-                                xs: "23px",
-                                sm: "30px",
-                                md: "40px",
-                                lg: "45px",
-                            },
-                            fontWeight: "bold",
-                            }}>
-                   Romance
-                </Typography>
-              </Grid>
-              <Grid item xs={6} sm={6} md={6}>
-              <Typography variant="h3" display="block" gutterBottom sx={{
-                            marginBottom: "20px",
-                            fontSize: {
-                                xs: "23px",
-                                sm: "30px",
-                                md: "40px",
-                                lg: "45px",
-                            },
-                            fontWeight: "bold",
-                            }}>
-                   Experimental
-                </Typography>
-              </Grid>
+            ))}
             </Grid>
           </Grid>
         </Grid>
