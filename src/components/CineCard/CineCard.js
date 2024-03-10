@@ -64,7 +64,12 @@ function MovieCard({ title, duration, mainImage, smallImages, onClick }) { // AÃ
               <Typography gutterBottom variant="h5" component="div"
               sx={{
                 marginBottom: "20px",
-                fontSize: "35px",
+                fontSize: {
+                  xs: "23px",
+                  sm: "25px",
+                  md: "35px",
+                  lg: "35px",
+              }, 
                 fontWeight: "bold",
                 textAlign: {
                     xs: "center", 
