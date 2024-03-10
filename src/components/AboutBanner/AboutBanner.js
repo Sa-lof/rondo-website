@@ -45,7 +45,7 @@ const AboutBanner = () => {
               variant="h2"
               gutterBottom
               sx={{
-                fontSize: { xs: '36px', sm: '48px', md: '64px' },
+                fontSize: { xs: '30px', sm: '48px', md: '64px' },
                 fontWeight: 'bold',
                 lineHeight: 'normal',
               }}

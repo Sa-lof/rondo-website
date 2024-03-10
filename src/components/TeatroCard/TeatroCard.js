@@ -17,7 +17,7 @@ function TeatroCard({title, mainImage, smallImages, duracion, ano }) {
             <Card
               onMouseEnter={() => setHover(true)} 
               onMouseLeave={() => setHover(false)} 
-              sx={{ position: 'relative', width: 1, height: 300 }}
+              sx={{ position: 'relative', width: 1, height: 300, boxShadow: 15}}
             >
               <CardMedia
                 component="img"
@@ -27,7 +27,8 @@ function TeatroCard({title, mainImage, smallImages, duracion, ano }) {
                   width: 1,
                   height: 300,
                   opacity: hover ? 0.3 : 1, 
-                  transition: 'opacity 0.5s'
+                  transition: 'opacity 0.5s',
+                  boxShadow: 3
                 }}
               />
               {hover && ( 
@@ -64,7 +65,7 @@ function TeatroCard({title, mainImage, smallImages, duracion, ano }) {
                 key={index}
                 src={image}
                 alt={`Thumbnail ${index + 1}`}
-                style={{ height: '100px', width: '95px', padding: '5px', borderRadius: '10px' }}
+                style={{ height: '100px', width: '95px', padding: '5px', borderRadius: '10px', boxShadow: 3}}
                 onClick={() => setSelectedImage(image)}
               />
             ))}

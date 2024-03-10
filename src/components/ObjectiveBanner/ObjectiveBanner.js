@@ -15,7 +15,7 @@ const ObjectiveBanner = () => {
       }}
     >
       <Grid container alignItems="center" spacing={3}>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={6} order={{ xs: 2, sm: 1 }}>
           <Box textAlign="center">
             <Typography
               variant="h2"
@@ -44,7 +44,7 @@ const ObjectiveBanner = () => {
             </Typography>
           </Box>
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={6} order={{ xs: 1, sm: 2 }}>
           <Box
             sx={{
               display: "flex",

@@ -83,12 +83,13 @@ const ContactForm = () => {
               justifyContent: "center",
               height: "100%",
               minHeight: { sm: 300 },
+              border: "none", 
             }}
           >
             <img
               src={logoImage}
               alt="Imagen descriptiva"
-              style={{ maxWidth: "100%", maxHeight: "100%" }}
+              style={{ maxWidth: "100%", maxHeight: "100%"}}
             />
           </Paper>
         </Grid>
