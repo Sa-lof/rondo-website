@@ -8,6 +8,7 @@ import {
   MenuItem,
   Box,
 } from "@mui/material";
+import logoImage from '../../assets/contacto/RONDO LOGO.png';
 
 const ContactForm = () => {
   const handleSubmit = (event) => {
@@ -85,7 +86,7 @@ const ContactForm = () => {
             }}
           >
             <img
-              src="ruta_a_tu_imagen.jpg" // Reemplaza con la ruta a tu imagen
+              src={logoImage}
               alt="Imagen descriptiva"
               style={{ maxWidth: "100%", maxHeight: "100%" }}
             />

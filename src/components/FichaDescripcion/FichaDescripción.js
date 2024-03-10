@@ -8,7 +8,7 @@ function FichaDecripcion(props) {
         <Grid container spacing={5}>
           <Grid item xs={12} sm={12} md={3}>
             <Typography variant="body1" display="block" gutterBottom>
-              DIRIGIDA Y PRODUCIDA POR
+              DIRECCIÓN
             </Typography>
             <Typography variant="h3" display="block" gutterBottom sx={{
                             marginBottom: "20px",

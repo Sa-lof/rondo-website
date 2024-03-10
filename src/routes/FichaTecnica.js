@@ -8,6 +8,9 @@ import poster1 from '../assets/cine/Sembrar/poster.png';
 import poster2 from '../assets/cine/ Confabulados/poster.png';
 import poster3 from '../assets/cine/Bailar/poster.png';
 import poster4 from '../assets/cine/Amar/poster.png';
+import laurel1 from '../assets/cine/ Confabulados/AMAR ES LIBERTAD_CONFABULADOS_OFFICIAL SELECTION - MAX3MIN FESTIVAL - 2021.png';
+import laurel2 from '../assets/cine/Amar/OFFICIAL SELECTION - CINEASTE INTERNATIONAL FILM FESTIVAL OF INDIA - CIFFI - 2022.png';
+
 import { useParams } from 'react-router-dom';
 
 const theme = createTheme({
@@ -57,6 +60,7 @@ function Ficha() {
       descripcion: "mainImageSembrar1",
       idioma: "Español",
       poster: poster2,
+      laureles: laurel1,
       links: [
         {
           label: "IMDb",
@@ -111,6 +115,7 @@ function Ficha() {
       descripcion: "mainImageSembrar1",
       idioma: "Español",
       poster: poster4,
+      laureles: laurel2,
       links: [
         {
           label: "IMDb",
@@ -118,7 +123,6 @@ function Ficha() {
           icon: "https://cdn.icon-icons.com/icons2/2622/PNG/512/brand_imdb_icon_158850.png",
         },
       ],
-  
       cast: [
         "Analú Flores",
         "Ottmar Russo",
@@ -156,7 +160,7 @@ function Ficha() {
           </Typography>
         </Grid>
         <Grid item xs={12} sm={12} md={5} style={{ display: 'flex', justifyContent: 'center' }}>
-          <img src="https://cdn.pixabay.com/photo/2017/01/25/17/35/picture-2008484_1280.png" alt="Descripción de la imagen" style={{ width: '60%' }} />
+          <img src={selectedMovie.laureles} alt="Descripción de la imagen" style={{ width: '60%' }} />
         </Grid>
       </Grid>
       <Grid item xs={12} sm={6} md={12}>

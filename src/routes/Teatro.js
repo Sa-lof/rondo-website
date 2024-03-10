@@ -7,6 +7,11 @@ import Box from "@mui/material/Box";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import TeatroCard from "../components/TeatroCard/TeatroCard";
+import mainImageCuatro1 from '../assets/teatro/cu4tro/1.jpg';
+import mainImageCuatro2 from '../assets/teatro/cu4tro/2.jpg';
+import mainImageCuatro3 from '../assets/teatro/cu4tro/3.jpg';
+import mainImageCuatro4 from '../assets/teatro/cu4tro/4.jpg';
+import Footer from "../components/Footer/Footer";
 
 const theme = createTheme({
     typography: {
@@ -14,6 +19,22 @@ const theme = createTheme({
     },
   });
 function Teatro() {
+
+  const peliculas = [
+    {
+      id:"1",
+      title: "Cu4tro Cu4rtos",
+      duration: "90 minutos",
+      mainImage: mainImageCuatro1,
+      smallImages: [
+        mainImageCuatro2,
+        mainImageCuatro3,
+        mainImageCuatro4,
+      ],
+      ano: "2022",
+    },
+  ];
+
   return (
     <ThemeProvider theme={theme}>
       <Nav />
@@ -78,13 +99,20 @@ function Teatro() {
           </Grid>
         </Grid>
         <Grid container spacing={10} sx={{ padding: 3 }}>
-          {[...Array(6)].map((_, index) => (
-            <Grid item xs={12} sm={12} md={12} key={index}>
-              <TeatroCard />
-            </Grid>
-          ))}
-        </Grid>
+        {peliculas.map((pelicula, index) => (
+          <Grid item xs={12} sm={12} md={12} key={index}>
+            <TeatroCard
+              title={pelicula.title}
+              mainImage={pelicula.mainImage}
+              smallImages={pelicula.smallImages}
+              duracion={pelicula.duration}
+              ano={pelicula.ano}
+            />
+          </Grid>
+        ))}
+      </Grid>
       </Box>
+      <Footer />
     </ThemeProvider>
   );
 }

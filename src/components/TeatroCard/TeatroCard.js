@@ -7,15 +7,9 @@ import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline'; 
 
-function TeatroCard() {
-    const [selectedImage, setSelectedImage] = useState("https://cdn.pixabay.com/photo/2017/01/25/17/35/picture-2008484_1280.png");
-    const [hover, setHover] = useState(false);
-
-    const smallImages = [
-        "https://img.asmedia.epimg.net/resizer/UzT6yeOIk7P6R1Nwx31_wWi5lcU=/360x203/cloudfront-eu-central-1.images.arcpublishing.com/diarioas/Z5JQ6IIK25PZZOGLPNYW7TNW3Y.jpg",
-        "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/713EAC98B3CEC6A774A84243AD1FA532576F243B8A152FEA0C03C4E32BBFE018/scale?width=1200&aspectRatio=1.78&format=webp",
-        "https://www.lavanguardia.com/files/image_449_220/files/fp/uploads/2023/02/07/63e26dd00be55.r_d.589-392.jpeg"
-    ];
+function TeatroCard({title, mainImage, smallImages, duracion, ano }) {
+  const [selectedImage, setSelectedImage] = useState(mainImage);
+  const [hover, setHover] = useState(false);
 
     return (  
         <Grid container spacing={2} justifyContent="center">
@@ -23,15 +17,15 @@ function TeatroCard() {
             <Card
               onMouseEnter={() => setHover(true)} 
               onMouseLeave={() => setHover(false)} 
-              sx={{ position: 'relative', width: 1, height: 280 }}
+              sx={{ position: 'relative', width: 1, height: 300 }}
             >
               <CardMedia
                 component="img"
                 image={selectedImage}
-                alt="Movie Title"
+                alt={title}
                 sx={{
                   width: 1,
-                  height: 280,
+                  height: 300,
                   opacity: hover ? 0.3 : 1, 
                   transition: 'opacity 0.5s'
                 }}
@@ -43,7 +37,7 @@ function TeatroCard() {
                     position: 'absolute', 
                     top: 0,
                     width: 1,
-                    height: 280,
+                    height: 300,
                     alignItems: 'center', 
                     justifyContent: 'center', 
                     textAlign: 'center'
@@ -57,7 +51,7 @@ function TeatroCard() {
                   <Typography variant="h4" component="h2" sx={{ color: 'black', fontWeight: 'bold', position: 'absolute', // Posición absoluta
                       bottom: 8, // Inferior izquierdo
                       left: 8,}}>
-                    Título película
+                    {title}
                   </Typography>
                 </Grid>
               )}
@@ -65,15 +59,15 @@ function TeatroCard() {
             </Grid>
 
             <Grid item xs={4} sm={2} lg={1} md={1} container direction="column" justifyContent="center" alignItems="center">
-                {smallImages.map((image, index) => (
-                    <img
-                        key={index}
-                        src={image}
-                        alt={`Thumbnail ${index + 1}`}
-                        style={{ height: '95px', width: '95px', padding: '5px', borderRadius: '10px'}} 
-                        onClick={() => setSelectedImage(image)}
-                    />
-                ))}
+            {smallImages.map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt={`Thumbnail ${index + 1}`}
+                style={{ height: '100px', width: '95px', padding: '5px', borderRadius: '10px' }}
+                onClick={() => setSelectedImage(image)}
+              />
+            ))}
             </Grid>
             <Grid item xs={12} sm={12} lg={3} md={3} container direction="column" justifyContent="center" alignItems="center" sx={{ borderTop: '2px solid black',  marginTop: {
         xs: '30px',
@@ -93,13 +87,13 @@ function TeatroCard() {
                             marginBottom: "20px",
                             fontSize: {
                                 xs: "23px",
-                                sm: "35px",
-                                md: "45px",
-                                lg: "50px",
+                                sm: "25px",
+                                md: "35px",
+                                lg: "35px",
                             },
                             fontWeight: "bold",
                             }}>
-                    2020
+                   {ano}
                 </Typography>
                 <Typography variant="body1" display="block" gutterBottom>
                     DURACIÓN
@@ -107,14 +101,14 @@ function TeatroCard() {
                 <Typography variant="h3" display="block" gutterBottom sx={{
                             marginBottom: "20px",
                             fontSize: {
-                                xs: "23px",
-                                sm: "35px",
-                                md: "45px",
-                                lg: "50px",
+                              xs: "23px",
+                              sm: "25px",
+                              md: "35px",
+                              lg: "35px",
                             },
                             fontWeight: "bold",
                             }}>
-                    4 min
+                    {duracion}
                 </Typography>
             </Grid>
         </Grid>
