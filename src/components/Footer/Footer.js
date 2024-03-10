@@ -3,6 +3,7 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import './Footer.css'; // Make sure your CSS is adjusted for Material-UI if necessary
+import logoImage from '../../assets/logos/LOGO_W.PNG';
 
 const Footer = () => {
   return (
@@ -11,7 +12,7 @@ const Footer = () => {
         <Grid container spacing={2}>
           <Grid item xs={12}>
             <img
-              src="/path-to-your-logo.png"
+              src={logoImage}
               alt="Logo"
               className="footer-logo"
             />
