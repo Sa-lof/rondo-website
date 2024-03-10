@@ -25,6 +25,7 @@ import mainImageAmar2 from '../assets/cine/Amar/2.PNG';
 import mainImageAmar3 from '../assets/cine/Amar/3.PNG';
 import mainImageAmar4 from '../assets/cine/Amar/4.PNG';
 import cine1 from '../assets/cine/claqueta.png';
+import { useNavigate } from 'react-router-dom'; // Añadir esta línea
 
 const theme = createTheme({
   typography: {
@@ -33,8 +34,14 @@ const theme = createTheme({
 });
 
 function Cine() {
+  const navigate = useNavigate();
+  const handleMovieClick = (movieId) => {
+    navigate(`/ficha/${movieId}`);
+  };
+
   const movies = [
     {
+      id:"1",
       title: "Sembrar",
       duration: "1:05",
       mainImage: mainImageSembrar1,
@@ -45,6 +52,7 @@ function Cine() {
       ],
     },
     {
+      id:"2",
       title: "Confabulados",
       duration: "4",
       mainImage: mainImageConfabulados1,
@@ -55,6 +63,7 @@ function Cine() {
       ],
     },
     {
+      id:"3",
       title: "Bailar es lo más difícil",
       duration: "0",
       mainImage: mainImageBailar1,
@@ -65,6 +74,7 @@ function Cine() {
       ],
     },
     {
+      id:"4",
       title: "Amar es lo libertad",
       duration: "2:46",
       mainImage: mainImageAmar1,
@@ -218,7 +228,7 @@ function Cine() {
           <Slider {...settings}>
             {movies.map((movie, index) => (
               <Box key={index} sx={{ textAlign: "center"}}>
-                <Typography variant="h6" component="h2">
+                <Typography variant="h6" component="h2" sx={{fontWeight: "bold"}}>
                   {movie.title}
                 </Typography>
               </Box>
@@ -227,12 +237,13 @@ function Cine() {
         </Box>
         <Grid container spacing={5} sx={{ marginTop: 4, padding: 5 }}>
         {movies.map((movie, index) => (
-          <Grid item xs={12} sm={12} md={12} lg={6} key={index}>
+          <Grid item xs={12} sm={12} md={12} lg={6} key={movie.id}>
             <CineCard
               title={movie.title}
               duration={movie.duration}
               mainImage={movie.mainImage}
               smallImages={movie.smallImages}
+              onClick={() => handleMovieClick(movie.id)} // Añade esto
             />
           </Grid>
         ))}

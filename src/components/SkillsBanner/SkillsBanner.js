@@ -47,7 +47,8 @@ const SkillsBanner = () => {
               sx={{
                 maxWidth: "100%",
                 objectFit: "cover",
-                maxHeight: { xs: "30vh", sm: "40vh", md: "50vh" }, // Adjust the value as needed
+                maxHeight: { xs: "30vh", sm: "40vh", md: "50vh" },
+                borderRadius:10
               }}
               src={SkillsBannerPlaceholder}
               alt="Objective banner"
