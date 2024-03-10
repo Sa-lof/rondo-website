@@ -2,7 +2,7 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import ObjectiveBannerPlaceholder from "../../assets/placeholders/ObjectiveBannerPlaceholder.png";
+import ObjectiveBannerPlaceholder from '../../assets/nosotros/Nuestro obj.jpg';
 
 const ObjectiveBanner = () => {
   return (
