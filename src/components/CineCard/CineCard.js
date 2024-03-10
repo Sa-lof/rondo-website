@@ -7,17 +7,17 @@ import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 
-function MovieCard({ title, duration, mainImage, smallImages }) {
+function MovieCard({ title, duration, mainImage, smallImages, onClick }) { // Añade onClick aquí
     const [selectedImage, setSelectedImage] = useState(mainImage);
     const [hover, setHover] = useState(false);
 
     return (
-        <Grid container>
+      <Grid container>
           <Grid item xs={12}>
             <Card
               onMouseEnter={() => setHover(true)} 
               onMouseLeave={() => setHover(false)} 
-              sx={{ position: 'relative', width: 1, height: 280 }}
+              sx={{ position: 'relative', width: 1, height: 280, boxShadow: 3}}
             >
               <CardMedia
                 component="img"
@@ -27,7 +27,8 @@ function MovieCard({ title, duration, mainImage, smallImages }) {
                   width: 1,
                   height: 280,
                   opacity: hover ? 0.3 : 1, 
-                  transition: 'opacity 0.5s'
+                  transition: 'opacity 0.5s',
+                  boxShadow: 3
                 }}
               />
               {hover && (
@@ -43,7 +44,7 @@ function MovieCard({ title, duration, mainImage, smallImages }) {
                     textAlign: 'center'
                   }}
                 >
-                  <IconButton size="large" sx={{ color: 'black', position: 'absolute', 
+                  <IconButton onClick={onClick} size="large" sx={{ color: 'black', position: 'absolute', 
                       top: 8, 
                       right: 8, }}>
                     <PlayCircleOutlineIcon sx={{ fontSize: '4rem' }} />
@@ -88,7 +89,7 @@ function MovieCard({ title, duration, mainImage, smallImages }) {
                     <Grid item key={index}>
                     <CardMedia
                         component="img"
-                        style={{ height: '80px', width: '80px', borderRadius: '10px' }} 
+                        style={{ height: '80px', width: '80px', borderRadius: '10px', boxShadow: 3}} 
                         image={image}
                         alt={`Small Image ${index + 1}`}
                         onClick={() => setSelectedImage(image)}
