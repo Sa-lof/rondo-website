@@ -218,7 +218,7 @@ function Cine() {
           <Slider {...settings}>
             {movies.map((movie, index) => (
               <Box key={index} sx={{ textAlign: "center"}}>
-                <Typography variant="h6" component="h2">
+                <Typography variant="h6" component="h2" sx={{fontWeight: "bold"}}>
                   {movie.title}
                 </Typography>
               </Box>
