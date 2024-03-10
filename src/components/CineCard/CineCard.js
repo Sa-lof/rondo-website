@@ -5,19 +5,13 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
-import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline'; 
+import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 
-function MovieCard() {
-    const [selectedImage, setSelectedImage] = useState("https://cdn.pixabay.com/photo/2017/01/25/17/35/picture-2008484_1280.png");
+function MovieCard({ title, duration, mainImage, smallImages }) {
+    const [selectedImage, setSelectedImage] = useState(mainImage);
     const [hover, setHover] = useState(false);
 
-    const smallImages = [
-        "https://img.asmedia.epimg.net/resizer/UzT6yeOIk7P6R1Nwx31_wWi5lcU=/360x203/cloudfront-eu-central-1.images.arcpublishing.com/diarioas/Z5JQ6IIK25PZZOGLPNYW7TNW3Y.jpg",
-        "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/713EAC98B3CEC6A774A84243AD1FA532576F243B8A152FEA0C03C4E32BBFE018/scale?width=1200&amp;aspectRatio=1.78&amp;format=webp",
-        "https://www.lavanguardia.com/files/image_449_220/files/fp/uploads/2023/02/07/63e26dd00be55.r_d.589-392.jpeg"
-    ];
-
-    return (  
+    return (
         <Grid container>
           <Grid item xs={12}>
             <Card
@@ -28,7 +22,7 @@ function MovieCard() {
               <CardMedia
                 component="img"
                 image={selectedImage}
-                alt="Movie Title"
+                alt={title}
                 sx={{
                   width: 1,
                   height: 280,
@@ -36,7 +30,7 @@ function MovieCard() {
                   transition: 'opacity 0.5s'
                 }}
               />
-              {hover && ( 
+              {hover && (
                 <Grid
                   container
                   sx={{
@@ -49,21 +43,21 @@ function MovieCard() {
                     textAlign: 'center'
                   }}
                 >
-                  <IconButton size="large" sx={{ color: 'black', position: 'absolute', // Posición absoluta
-                      top: 8, // Superior derecho
+                  <IconButton size="large" sx={{ color: 'black', position: 'absolute', 
+                      top: 8, 
                       right: 8, }}>
                     <PlayCircleOutlineIcon sx={{ fontSize: '4rem' }} />
                   </IconButton>
-                  <Typography variant="h4" component="h2" sx={{ color: 'black', fontWeight: 'bold', position: 'absolute', // Posición absoluta
-                      bottom: 8, // Inferior izquierdo
+                  <Typography variant="h4" component="h2" sx={{ color: 'black', fontWeight: 'bold', position: 'absolute', 
+                      bottom: 8, 
                       left: 8,}}>
-                    Título película
+                    {title}
                   </Typography>
                 </Grid>
               )}
             </Card>
           </Grid>
-  
+
           <Grid item container xs={12} alignItems="center" justifyContent="space-between" paddingTop={2} paddingBottom={2}>
             <Grid item xs={12} lg={5} md={5} sm={5}>
               <Typography gutterBottom variant="h5" component="div"
@@ -78,10 +72,10 @@ function MovieCard() {
                     lg: "left",
                   },
               }}>
-                4 minutos
+                {duration} minutos
               </Typography>
             </Grid>
-  
+
             <Grid item container xs={12} lg={7} md={7} sm={7} spacing={2} sx={{
                   justifyContent: {
                     xs: "center", 
