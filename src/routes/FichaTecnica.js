@@ -29,7 +29,14 @@ function Ficha() {
       descripcion: "mainImageSembrar1",
       idioma: "Español",
       poster: poster1,
-      link: "https://www.imdb.com/title/tt31462284/?ref_=ext_shr_lnk",
+      links: [
+        {
+          label: "IMDb",
+          url: "https://www.imdb.com/title/tt31462284/?ref_=ext_shr_lnk",
+          icon: "https://cdn.icon-icons.com/icons2/2622/PNG/512/brand_imdb_icon_158850.png",
+        },
+      ],
+  
       cast: [
         "María Ibarra Paleta",
         "Sofía Valdés",
@@ -50,7 +57,23 @@ function Ficha() {
       descripcion: "mainImageSembrar1",
       idioma: "Español",
       poster: poster2,
-      link: "https://www.imdb.com/title/tt31462109/?ref_=ext_shr_lnk",
+      links: [
+        {
+          label: "IMDb",
+          url: "https://www.imdb.com/title/tt31462109/?ref_=ext_shr_lnk",
+          icon: "https://cdn.icon-icons.com/icons2/2622/PNG/512/brand_imdb_icon_158850.png",
+        },
+        {
+          label: "Letterboxd",
+          url: "https://boxd.it/FkrC",
+          icon: "https://a.ltrbxd.com/logos/letterboxd-mac-icon.png",
+        },
+        {
+          label: "Filminlatino",
+          url: "https://nuestrocine.mx/",
+          icon: "https://play-lh.googleusercontent.com/07RVCovGaKl5m8g09v0u_JVPbHw3wFRg0PYdlyTTpRG0ZsB1kCt01DqsepLene6mSQ",
+        },
+      ],
       cast: [
         "Analú Flores",
         "Santiago Bautista",
@@ -62,7 +85,7 @@ function Ficha() {
     {
       id:"3",
       title: "Bailar es lo más dificil",
-      duracion: "POST PRODUCCIÓN",
+      duracion: "Post Producción",
       dirigida: "Omar Drioli y Fernando Luna",
       ano: "2023",
       descripcion: "mainImageSembrar1",
@@ -88,7 +111,14 @@ function Ficha() {
       descripcion: "mainImageSembrar1",
       idioma: "Español",
       poster: poster4,
-      link: "https://www.imdb.com/title/tt31462225/?ref_=ext_shr_lnk",
+      links: [
+        {
+          label: "IMDb",
+          url: "https://www.imdb.com/title/tt31462225/?ref_=ext_shr_lnk",
+          icon: "https://cdn.icon-icons.com/icons2/2622/PNG/512/brand_imdb_icon_158850.png",
+        },
+      ],
+  
       cast: [
         "Analú Flores",
         "Ottmar Russo",
@@ -166,15 +196,18 @@ function Ficha() {
             marginBottom: 2,
           }}
         >
-          <IconButton
-            aria-label="imdb"
-            onClick={() => window.open(selectedMovie.link, '_blank')}
-            sx={{
-            
-            }}
-          >
-            <img src="https://cdn.icon-icons.com/icons2/2622/PNG/512/brand_imdb_icon_158850.png" alt="IMDb" style={{ width: 60, height: 60 }} />
-          </IconButton>
+          {selectedMovie.links?.map((link, index) => (
+    <IconButton
+      key={index}
+      aria-label={link.label}
+      onClick={() => window.open(link.url, '_blank')}
+      sx={{
+        // Add custom styles if needed
+      }}
+    >
+      <img src={link.icon} alt={link.label} style={{ width: 60, height: 60 }} />
+    </IconButton>
+  ))}
         </Box>
       </Grid>
       <Footer />

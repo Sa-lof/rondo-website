@@ -1,7 +1,7 @@
-import React from "react";
+import React, { Suspense } from 'react';
 import Nav from "../components/Nav/Nav";
-import CineCard from "../components/CineCard/CineCard";
 import Grid from "@mui/material/Grid";
+import Footer from "../components/Footer/Footer";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
@@ -24,8 +24,9 @@ import mainImageAmar1 from '../assets/cine/Amar/1.PNG';
 import mainImageAmar2 from '../assets/cine/Amar/2.PNG';
 import mainImageAmar3 from '../assets/cine/Amar/3.PNG';
 import mainImageAmar4 from '../assets/cine/Amar/4.PNG';
-import cine1 from '../assets/cine/claqueta.png';
+import cine1 from '../assets/cine/Viaje Mas alla.jpg';
 import { useNavigate } from 'react-router-dom'; // Añadir esta línea
+const CineCard = React.lazy(() => import("../components/CineCard/CineCard"));
 
 const theme = createTheme({
   typography: {
@@ -41,31 +42,9 @@ function Cine() {
 
   const movies = [
     {
-      id:"1",
-      title: "Sembrar",
-      duration: "1:05",
-      mainImage: mainImageSembrar1,
-      smallImages: [
-        mainImageSembrar2,
-        mainImageSembrar3,
-        mainImageSembrar4,
-      ],
-    },
-    {
-      id:"2",
-      title: "Confabulados",
-      duration: "4",
-      mainImage: mainImageConfabulados1,
-      smallImages: [
-        mainImageConfabulados2,
-        mainImageConfabulados3,
-        mainImageConfabulados4,
-      ],
-    },
-    {
       id:"3",
       title: "Bailar es lo más difícil",
-      duration: "0",
+      duration: "Post producción",
       mainImage: mainImageBailar1,
       smallImages: [
         mainImageBailar2,
@@ -74,9 +53,20 @@ function Cine() {
       ],
     },
     {
+      id:"1",
+      title: "Sembrar",
+      duration: "1:05 minutos",
+      mainImage: mainImageSembrar1,
+      smallImages: [
+        mainImageSembrar2,
+        mainImageSembrar3,
+        mainImageSembrar4,
+      ],
+    },
+    {
       id:"4",
-      title: "Amar es lo libertad",
-      duration: "2:46",
+      title: "Amar es libertad",
+      duration: "2:46 minutos",
       mainImage: mainImageAmar1,
       smallImages: [
         mainImageAmar2,
@@ -84,6 +74,17 @@ function Cine() {
         mainImageAmar4,
       ],
     },
+    {
+      id:"2",
+      title: "Confabulados",
+      duration: "4 minutos",
+      mainImage: mainImageConfabulados1,
+      smallImages: [
+        mainImageConfabulados2,
+        mainImageConfabulados3,
+        mainImageConfabulados4,
+      ],
+    }
   ];
 
   const settings = {
@@ -159,6 +160,8 @@ function Cine() {
                   maxWidth: "100%",
                   objectFit: "cover",
                   maxHeight: "100%",
+                  borderRadius: '10px',
+                  boxShadow: 10
                 }}
               />
             </Box>
@@ -218,37 +221,46 @@ function Cine() {
           </Grid>
         </Grid>
         <Box sx={{
-          flexGrow: 1, 
-          overflow: "hidden", 
-          borderTop: "2px solid black",
-          borderBottom: "2px solid black",
-          paddingBottom: 3,
-          paddingTop: 3,
-        }}>
-          <Slider {...settings}>
-            {movies.map((movie, index) => (
-              <Box key={index} sx={{ textAlign: "center"}}>
-                <Typography variant="h6" component="h2" sx={{fontWeight: "bold"}}>
-                  {movie.title}
-                </Typography>
-              </Box>
-            ))}
-          </Slider>
-        </Box>
-        <Grid container spacing={5} sx={{ marginTop: 4, padding: 5 }}>
-        {movies.map((movie, index) => (
-          <Grid item xs={12} sm={12} md={12} lg={6} key={movie.id}>
-            <CineCard
-              title={movie.title}
-              duration={movie.duration}
-              mainImage={movie.mainImage}
-              smallImages={movie.smallImages}
-              onClick={() => handleMovieClick(movie.id)} // Añade esto
-            />
-          </Grid>
-        ))}
-      </Grid>
+  flexGrow: 1,
+  overflow: "hidden",
+  backgroundImage: `
+    repeating-linear-gradient(-45deg, black, black 10px, transparent 10px, transparent 20px),
+    repeating-linear-gradient(-45deg, black, black 10px, transparent 10px, transparent 20px)
+  `,
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "100% 20px",
+  backgroundPosition: "top, bottom",
+  paddingBottom: 3,
+  paddingTop: 3,
+}}>
+  <Slider {...settings}>
+    {movies.map((movie, index) => (
+      <Box key={index} sx={{ textAlign: "center"}}>
+        <Typography variant="h6" component="h2" sx={{fontWeight: "bold", marginTop:1.5,  marginBottom:1.5}}>
+          {movie.title}
+        </Typography>
       </Box>
+    ))}
+  </Slider>
+</Box>
+
+          <Suspense fallback={<div>Cargando...</div>}>
+            <Grid container spacing={5} sx={{ marginTop: 4, padding: 5 }}>
+              {movies.map((movie, index) => (
+                <Grid item xs={12} sm={12} md={12} lg={6} key={movie.id}>
+                  <CineCard
+                    title={movie.title}
+                    duration={movie.duration}
+                    mainImage={movie.mainImage}
+                    smallImages={movie.smallImages}
+                    onClick={() => handleMovieClick(movie.id)}
+                  />
+                </Grid>
+              ))}
+            </Grid>
+          </Suspense>
+        </Box>
+      <Footer />
     </ThemeProvider>
   );
 }

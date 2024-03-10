@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import "./Nav.css"; // Ensure the CSS path is correct
+import "./Nav.css";
 import logoImage from '../../assets/logos/LOGO_B.PNG';
+import { Link } from "react-router-dom";
 
 function Nav() {
   const [isActive, setIsActive] = useState(false);
@@ -19,7 +20,9 @@ function Nav() {
         style={{ display: "none" }}
       />
       <div className="navbar">
-        <img src={logoImage} alt="Logo" className="logo" />
+        <Link to="/" onClick={toggleMenu}>
+          <img src={logoImage} alt="Logo" className="logo" />
+        </Link>
         <label htmlFor="active" className="menu-btn">
           <span></span>
         </label>
