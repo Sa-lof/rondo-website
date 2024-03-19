@@ -6,7 +6,7 @@ import Grid from "@mui/material/Grid";
 import service1 from '../assets/services/01Publicidad.jpg';
 import service2 from '../assets/services/02Cine.jpeg';
 import service3 from '../assets/services/03Video musical.png';
-import service4 from '../assets/services/04Creativos.JPG';
+import service4 from '../assets/services/Social y Corporativo.jpg';
 import service5 from '../assets/services/05PostProducción.png';
 import service6 from '../assets/services/06Teatro.jpg';
 import Typography from "@mui/material/Typography";
@@ -19,10 +19,10 @@ const theme = createTheme({
 });
 
 const servicesData = [
-  { title: "Publicidad", imagen: service1},
   { title: "Cine", imagen: service2},
+  { title: "Publicidad", imagen: service1},
   { title: "Video musical", imagen: service3 },
-  { title: "Creativos", imagen: service4},
+  { title: "Social y corporativo", imagen: service4},
   { title: "Post Producción", imagen: service5},
   { title: "Teatro", imagen: service6},
 ];

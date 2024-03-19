@@ -24,7 +24,18 @@ import mainImageAmar1 from '../assets/cine/Amar/1.PNG';
 import mainImageAmar2 from '../assets/cine/Amar/2.PNG';
 import mainImageAmar3 from '../assets/cine/Amar/3.PNG';
 import mainImageAmar4 from '../assets/cine/Amar/4.PNG';
-import cine1 from '../assets/cine/Viaje Mas alla.jpg';
+import mainImageTurandot1 from '../assets/cine/turandot/1.png';
+import mainImageTurandot2 from '../assets/cine/turandot/2.png';
+import mainImageTurandot3 from '../assets/cine/turandot/3.png';
+import mainImageTurandot4 from '../assets/cine/turandot/4.png';
+import mainImageEscrito1 from '../assets/cine/Escrito/1.png';
+import mainImageEscrito2 from '../assets/cine/Escrito/2.png';
+import mainImageEscrito3 from '../assets/cine/Escrito/3.png';
+import mainImageEscrito4 from '../assets/cine/Escrito/4.png';
+import mainImageLucha1 from '../assets/cine/Lucha/1.png';
+import mainImageLucha2 from '../assets/cine/Lucha/2.png';
+import mainImageLucha3 from '../assets/cine/Lucha/3.png';
+import mainImageLucha4 from '../assets/cine/Lucha/4.png';
 import { useNavigate } from 'react-router-dom'; // Añadir esta línea
 const CineCard = React.lazy(() => import("../components/CineCard/CineCard"));
 
@@ -42,9 +53,42 @@ function Cine() {
 
   const movies = [
     {
+      id:"5",
+      title: "La verdadera historia de la princesa turandot",
+      duration: "Live Sesion",
+      mainImage: mainImageTurandot1,
+      smallImages: [
+        mainImageTurandot2,
+        mainImageTurandot3,
+        mainImageTurandot4,
+      ],
+    },
+    {
+      id:"6",
+      title: "Escrito y hecho",
+      duration: "Video Musical",
+      mainImage: mainImageEscrito1,
+      smallImages: [
+        mainImageEscrito2,
+        mainImageEscrito3,
+        mainImageEscrito4,
+      ],
+    },
+    {
+      id:"7",
+      title: "La lucha",
+      duration: "Cortrometraje Original",
+      mainImage: mainImageLucha1,
+      smallImages: [
+        mainImageLucha2,
+        mainImageLucha3,
+        mainImageLucha4,
+      ],
+    },
+    {
       id:"3",
       title: "Bailar es lo más difícil",
-      duration: "Post producción",
+      duration: "Cortrometraje Original",
       mainImage: mainImageBailar1,
       smallImages: [
         mainImageBailar2,
@@ -55,7 +99,7 @@ function Cine() {
     {
       id:"1",
       title: "Sembrar",
-      duration: "1:05 minutos",
+      duration: "Cortrometraje Original",
       mainImage: mainImageSembrar1,
       smallImages: [
         mainImageSembrar2,
@@ -66,7 +110,7 @@ function Cine() {
     {
       id:"4",
       title: "Amar es libertad",
-      duration: "2:46 minutos",
+      duration: "Cortrometraje Original",
       mainImage: mainImageAmar1,
       smallImages: [
         mainImageAmar2,
@@ -77,7 +121,7 @@ function Cine() {
     {
       id:"2",
       title: "Confabulados",
-      duration: "4 minutos",
+      duration: "Cortrometraje Original",
       mainImage: mainImageConfabulados1,
       smallImages: [
         mainImageConfabulados2,
@@ -124,55 +168,13 @@ function Cine() {
     <ThemeProvider theme={theme}>
       <Nav />
       <Box sx={{ width: "100vw", boxSizing: "border-box", minHeight: "50vh", marginBottom: 5, paddingTop: 7}}>
-        <Grid container spacing={0} sx={{ minHeight: "45vh"}}>
-          <Grid item xs={12} md={4}>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                padding: 2,
-                height: {
-                  xs: "90%",
-                  sm: "95%",
-                  md: "80%",
-                  lg: "80%",
-                },
-                width: {
-                  xs: "60%",
-                  sm: "60%",
-                  md: "80%",
-                  lg: "85%",
-                },
-                margin: "0 auto",
-                paddingBottom: {
-                  xs: 7,
-                  sm: 8,
-                  md: 8,
-                  lg: 4,
-                }
-              }}
-            >
-              <img
-                src={cine1}
-                alt="About us banner"
-                style={{
-                  maxWidth: "100%",
-                  objectFit: "cover",
-                  maxHeight: "100%",
-                  borderRadius: '10px',
-                  boxShadow: 10
-                }}
-              />
-            </Box>
-          </Grid>
-
-          <Grid item xs={12} md={8} sx={{paddingBottom: {
-        xs: 3,
-        sm: 4,
-        md: 5,
-        lg: 4,
-      }}}>
+      <Grid container spacing={0} sx={{ minHeight: {
+                  xs: "25vh",
+                  sm: "30vh",
+                  md: "35vh",
+                  lg: "39vh",
+                },}}>
+          <Grid item xs={12} md={12}>
             <Box
               sx={{
                 height: {
@@ -186,13 +188,18 @@ function Cine() {
                 justifyContent: "center",
                 textAlign: "center",
                 padding: 2,
+                paddingTop: {
+                  xs: 10,
+                  sm: 8,
+                  md: 6,
+                  lg: 4,
+                }
               }}
             >
               <Typography
                 variant="h1"
                 gutterBottom
                 sx={{
-
                   fontSize: {
                     xs: "30px",
                     sm: "40px",
@@ -215,7 +222,7 @@ function Cine() {
                   },
                 }}
               >
-                y adéntrate en la magia de nuestro trabajo cinematográfico
+              y adéntrate en la magia de nuestro trabajo cinematográfico
               </Typography>
             </Box>
           </Grid>

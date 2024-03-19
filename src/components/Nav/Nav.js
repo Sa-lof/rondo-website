@@ -33,7 +33,7 @@ function Nav() {
       <ul>
         <li><a href="/" onClick={toggleMenu}>Inicio</a></li>
         <li><a href="/nosotros" onClick={toggleMenu}>Nosotros</a></li>
-        <li><a href="/cine" onClick={toggleMenu}>Cine</a></li>
+        <li><a href="/cine" onClick={toggleMenu}>Audiovisual</a></li>
         <li><a href="/teatro" onClick={toggleMenu}>Teatro</a></li>
         <li><a href="/servicios" onClick={toggleMenu}>Servicios</a></li>
         <li><a href="/contacto" onClick={toggleMenu}>Contacto</a></li>

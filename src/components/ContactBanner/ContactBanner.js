@@ -26,7 +26,7 @@ const ContactBanner = () => {
               fontSize: { xs: '1rem', sm: '1.25rem', md: '1.5rem' } // Responsive font size
             }}
           >
-            rondo@gmail.com
+            info@rondoproductions.com
           </Typography>
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -51,15 +51,15 @@ const ContactBanner = () => {
               fontSize: { xs: '1rem', sm: '1.25rem', md: '1.5rem' } // Responsive font size
             }}
           >
-            Dirección
+            CDMX
           </Typography>
         </Grid>
         <Grid item xs={12} sm={6}>
           <Box display="flex" justifyContent="center" alignItems="center">
-            <Link href="https://instagram.com" target="_blank">
+            <Link href="https://www.instagram.com/rondo.productions/" target="_blank">
               <InstagramIcon sx={{ color: "black", fontSize: "2rem", marginX: 1 }} />
             </Link>
-            <Link href="https://facebook.com" target="_blank">
+            <Link href="https://www.facebook.com/profile.php?id=100084389084321" target="_blank">
               <FacebookIcon sx={{ color: "black", fontSize: "2rem", marginX: 1 }} />
             </Link>
             {/* Your custom IMDb icon */}
