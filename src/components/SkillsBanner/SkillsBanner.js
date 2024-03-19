@@ -6,19 +6,19 @@ import SkillsBannerPlaceholder from '../../assets/nosotros/Nuestras Habilidades.
 
 const skills = [
   {
-    title: "Desarrollo Creativo y Preproducción",
+    title: "Desarrollo creativo y preproducción",
     description:
-      "Concepto e ideación creativa / Producción / Guiones gráficos / Escritura de guiones / Casting / Localización de abastecimiento, exploración y permisos / Planificación y estrategia de producción",
+      "Escuchar ideas / Conceptualizar / Proponer / Escritura de guiones / Storyboard / Agenda de Producción / Casting / Scouting de locación / Permisos de filmación / Logística / Aprobación",
   },
   {
-    title: "Dirección y Producción",
+    title: "Dirección y producción",
     description:
-      "Dirección de actores / Dirección de arte / Dirección de fotografía / Dirección de producción / Dirección de sonido / Dirección de vestuario / Dirección de maquillaje",
+      "Ejecución en tiempo y forma establecida / Dirección de actores / Dirección de Cámara / Iluminación / Dirección de arte /  Sonorización /  Vestuario / Maquillaje / Monitoreo de imagen en tiempo real ",
   },
   {
     title: "Postproducción",
     description:
-      "Edición / Corrección de color / Efectos visuales / Animación / Música / Sonido / Mezcla de sonido / Masterización",
+      "Edición / Montaje de imagen / Corrección de color / Efectos visuales / Animación / Musicalización / Diseńo sonoro / Mezcla / Masterización / Entregable en todo tipo de dispositivos y formatos",
   },
 ];
 
@@ -68,7 +68,7 @@ const SkillsBanner = () => {
                 marginBottom: { xs: 2, md: 4 },
               }}
             >
-              Nuestras Habilidades
+             Nuestras habilidades y metodología
             </Typography>
             {skills.map((skill, index) => (
               <Box key={index} marginBottom={4}>
