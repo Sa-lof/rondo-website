@@ -65,7 +65,7 @@ function TeatroCard({title, mainImage, smallImages, duracion, ano }) {
                 key={index}
                 src={image}
                 alt={`Thumbnail ${index + 1}`}
-                style={{ height: '100px', width: '95px', padding: '5px', borderRadius: '10px', boxShadow: 3}}
+                style={{ height: '95px', width: '100px', padding: '5px', borderRadius: '10px', boxShadow: 3}}
                 onClick={() => setSelectedImage(image)}
               />
             ))}
@@ -80,7 +80,7 @@ function TeatroCard({title, mainImage, smallImages, duracion, ano }) {
         sm: '0px',
         md: '30px',
         lg: '30px'
-    }}}>
+    },textAlign: 'center'}}>
                 <Typography variant="body1" display="block" gutterBottom>
                     AÑO
                 </Typography>
@@ -97,7 +97,7 @@ function TeatroCard({title, mainImage, smallImages, duracion, ano }) {
                    {ano}
                 </Typography>
                 <Typography variant="body1" display="block" gutterBottom>
-                    DURACIÓN
+                    TIPO
                 </Typography>
                 <Typography variant="h3" display="block" gutterBottom sx={{
                             marginBottom: "20px",
