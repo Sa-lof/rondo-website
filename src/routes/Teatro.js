@@ -11,6 +11,10 @@ import mainImageCuatro1 from '../assets/teatro/cu4tro/1.jpg';
 import mainImageCuatro2 from '../assets/teatro/cu4tro/2.jpg';
 import mainImageCuatro3 from '../assets/teatro/cu4tro/3.jpg';
 import mainImageCuatro4 from '../assets/teatro/cu4tro/4.jpg';
+import mainImageMama1 from '../assets/teatro/Mama/1.jpg';
+import mainImageMama2 from '../assets/teatro/Mama/2.jpg';
+import mainImageMama3 from '../assets/teatro/Mama/3.jpg';
+import mainImageMama4 from '../assets/teatro/Mama/4.jpg';
 import Footer from "../components/Footer/Footer";
 
 const theme = createTheme({
@@ -24,12 +28,24 @@ function Teatro() {
     {
       id:"1",
       title: "Cu4tro Cu4rtos",
-      duration: "90 minutos",
+      duration: "Producción original",
       mainImage: mainImageCuatro1,
       smallImages: [
         mainImageCuatro2,
         mainImageCuatro3,
         mainImageCuatro4,
+      ],
+      ano: "2022",
+    },
+    {
+      id:"2",
+      title: "Mamá se fue a la luna",
+      duration: "Musicalización",
+      mainImage: mainImageMama1,
+      smallImages: [
+        mainImageMama2,
+        mainImageMama3,
+        mainImageMama4,
       ],
       ano: "2022",
     },

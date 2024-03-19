@@ -50,7 +50,7 @@ const AboutBanner = () => {
                 lineHeight: 'normal',
               }}
             >
-              "El cine es un espejo que flota a través del tiempo y captura las emociones de una época."
+              “¡Por primera vez en toda mi vida, sé lo que quiero hacer! ¡Y por primera vez, lo haré!”.
             </Typography>
             <Typography
               variant="h6"
@@ -59,7 +59,7 @@ const AboutBanner = () => {
                 mt: { xs: 2, md: 4 },
               }}
             >
-              - Steven Spielberg
+              - La sociedad de los poetas muertos
             </Typography>
           </Box>
         </Grid>

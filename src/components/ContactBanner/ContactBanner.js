@@ -26,9 +26,10 @@ const ContactBanner = () => {
               fontSize: { xs: '1rem', sm: '1.25rem', md: '1.5rem' } // Responsive font size
             }}
           >
-            rondo@gmail.com
+            info@rondoproductions.com
           </Typography>
         </Grid>
+        {/*
         <Grid item xs={12} sm={6}>
           <Typography
             variant="body1"
@@ -39,7 +40,7 @@ const ContactBanner = () => {
           >
             55445656787
           </Typography>
-        </Grid>
+        </Grid>*/}
       </Grid>
 
       <Grid container justifyContent="center" spacing={2} sx={{ paddingTop: 3 }}>
@@ -51,21 +52,20 @@ const ContactBanner = () => {
               fontSize: { xs: '1rem', sm: '1.25rem', md: '1.5rem' } // Responsive font size
             }}
           >
-            Dirección
+            CDMX
           </Typography>
         </Grid>
         <Grid item xs={12} sm={6}>
           <Box display="flex" justifyContent="center" alignItems="center">
-            <Link href="https://instagram.com" target="_blank">
+            <Link href="https://www.instagram.com/rondo.productions/" target="_blank">
               <InstagramIcon sx={{ color: "black", fontSize: "2rem", marginX: 1 }} />
             </Link>
-            <Link href="https://facebook.com" target="_blank">
+            <Link href="https://www.facebook.com/profile.php?id=100084389084321" target="_blank">
               <FacebookIcon sx={{ color: "black", fontSize: "2rem", marginX: 1 }} />
             </Link>
-            {/* Your custom IMDb icon */}
-            <Box component="span" sx={{ marginX: 1 }}>
-              {/* Your SVG code */}
-            </Box>
+            <Link href="https://m.imdb.com/name/nm15819071/?language=es-mx" target="_blank">
+              <img src="https://www.svgrepo.com/show/333553/imdb.svg" alt="IMDb Icon" style={{ width: '2rem', marginX: '1rem' }} />
+            </Link>
           </Box>
         </Grid>
       </Grid>

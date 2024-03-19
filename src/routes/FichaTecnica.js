@@ -8,8 +8,12 @@ import poster1 from '../assets/cine/Sembrar/poster.png';
 import poster2 from '../assets/cine/ Confabulados/poster.png';
 import poster3 from '../assets/cine/Bailar/poster.png';
 import poster4 from '../assets/cine/Amar/poster.png';
+import poster5 from '../assets/cine/turandot/poster.jpeg';
+import poster6 from '../assets/cine/Escrito/poster.jpeg';
+import poster7 from '../assets/cine/Lucha/poster.jpeg';
 import laurel1 from '../assets/cine/ Confabulados/AMAR ES LIBERTAD_CONFABULADOS_OFFICIAL SELECTION - MAX3MIN FESTIVAL - 2021.png';
 import laurel2 from '../assets/cine/Amar/OFFICIAL SELECTION - CINEASTE INTERNATIONAL FILM FESTIVAL OF INDIA - CIFFI - 2022.png';
+import laurel3 from '../assets/contacto/RONDO LOGO.png';
 
 import { useParams } from 'react-router-dom';
 
@@ -28,10 +32,12 @@ function Ficha() {
       title: "Sembrar",
       duracion: "1:05 Min",
       dirigida: "Omar Drioli y Lilly Maldonado",
+      produccion: "Rondo",
       ano: "2023",
-      descripcion: "mainImageSembrar1",
+      descripcion: "En un mundo donde la naturaleza esta por desaparecer, un grupo de amigas se reune por última vez para salvar al planeta tierra. ",
       idioma: "Español",
       poster: poster1,
+      laureles: laurel3,
       links: [
         {
           label: "IMDb",
@@ -47,17 +53,17 @@ function Ficha() {
       ],
       genero: [
         "Drama",
-        "Ficción",
-        "Cambio Ambiental",
+        "Cambio Climático",
       ],
     },
     {
       id:"2",
       title: "Confabulados",
-      duracion: "4 mins",
+      duracion: "4:00 mins",
       dirigida: "Omar Drioli",
+      produccion: "Rondo",
       ano: "2021",
-      descripcion: "mainImageSembrar1",
+      descripcion: "Poesía audiovisual que explora las emociones de conectar por primera vez, a través, de una conversación atemporal que construyen momentos del pasasdo.",
       idioma: "Español",
       poster: poster2,
       laureles: laurel1,
@@ -83,7 +89,9 @@ function Ficha() {
         "Santiago Bautista",
       ],
       genero: [
-        "Corto",
+        "Drama",
+        "Romance",
+        "Experimental",
       ],
     },
     {
@@ -91,10 +99,12 @@ function Ficha() {
       title: "Bailar es lo más dificil",
       duracion: "Post Producción",
       dirigida: "Omar Drioli y Fernando Luna",
-      ano: "2023",
-      descripcion: "mainImageSembrar1",
+      produccion: "Rondo",
+      ano: "Post producción",
+      descripcion: "Sara terminó una relación que no le permitía ser quien era. Le cuesta volver a confiar en lo que siente. En su camino de seguir adelante conoce a Uriel. Él sin buscarlo, le contagia su manera de ver la vida, de vivir el momento, de estar presentes el uno para el otro y de darse cuenta que el amor no siempre funciona, pero a veces solo se necesita una canción y volver a intentarlo.",
       idioma: "Español",
       poster: poster3,
+      laureles: laurel3,
       cast: [
         "Monica Gutierrez",
         "Alan Soto",
@@ -109,10 +119,11 @@ function Ficha() {
     {
       id:"4",
       title: "Amar es libertad",
-      duracion: "2:46 mins",
+      duracion: "1:46 mins",
       dirigida: "Omar Drioli",
+      produccion: "Rondo",
       ano: "2022",
-      descripcion: "mainImageSembrar1",
+      descripcion: "Un cortrometraje narrado a través de la voz de Titania, una mujer que se alimenta de las almas culpables que habitan el planeta tierra, buscando sembrar una flor de amor y esperanza por cada vida que ha vengado.",
       idioma: "Español",
       poster: poster4,
       laureles: laurel2,
@@ -129,8 +140,91 @@ function Ficha() {
       ],
       genero: [
         "Drama",
-        "Thriller",
         "Experimental",
+      ],
+    },
+    {
+      id:"5",
+      title: "La verdadera historia de la princesa turandot",
+      duracion: "11:01 min",
+      dirigida: "Omar Drioli",
+      produccion: "Rondo",
+      descripcion: "Live session de la música de la obra de teatro: La verdadera historia de la princesa turandot, en un formato estilo live session para su promoción en redes.",
+      ano: "2024",
+      idioma: "Español",
+      poster: poster5,
+      laureles: laurel3,
+      links: [
+        {
+          label: "IMDb",
+          url: "https://www.imdb.com/title/tt31462225/?ref_=ext_shr_lnk",
+          icon: "https://cdn.icon-icons.com/icons2/2622/PNG/512/brand_imdb_icon_158850.png",
+        },
+      ],
+      cast: [
+        "Kaveh Parmas",
+        "Daniela Momo",
+        "Raúl Román",
+        "Manuel Mejía",
+        "Acción Sonora",
+      ],
+      genero: [
+        "Live Session",
+      ],
+    },
+    {
+      id:"6",
+      title: "Escrito y hecho ",
+      duracion: "Post Producción",
+      dirigida: "Omar Drioli",
+      produccion: "Rondo",
+      ano: "Post producción",
+      descripcion: "Video musical para banda dependiente.",
+      idioma: "Español",
+      poster: poster6,
+      laureles: laurel3,
+      links: [
+        {
+          label: "IMDb",
+          url: "https://www.imdb.com/title/tt31462225/?ref_=ext_shr_lnk",
+          icon: "https://cdn.icon-icons.com/icons2/2622/PNG/512/brand_imdb_icon_158850.png",
+        },
+      ],
+      cast: [
+        "Melissa Martz",
+        "Jose María Esquivel",
+        "Alejandra Campos",
+        "Azul Balderas",
+      ],
+      genero: [
+        "Video Musical",
+      ],
+    },
+    {
+      id:"7",
+      title: "La lucha",
+      duracion: "1:00 min",
+      dirigida: "Gabriel Heredia",
+      produccion: "Rondo - Servicio de producción",
+      ano: "2023",
+      descripcion: "Valentina es una niña a la que no solo le fascina la lucha libre, sino que también algún día aspira a ser luchadora. Sin embargo, los sistemas y sociedad no dejan que ella logre ese sueño.",
+      idioma: "Español",
+      poster: poster7,
+      laureles: laurel3,
+      links: [
+        {
+          label: "IMDb",
+          url: "https://www.imdb.com/title/tt31462225/?ref_=ext_shr_lnk",
+          icon: "https://cdn.icon-icons.com/icons2/2622/PNG/512/brand_imdb_icon_158850.png",
+        },
+      ],
+      cast: [
+        "Danna",
+        "Nidia Bermejo",
+        "Emma Malacara",
+      ],
+      genero: [
+        "Drama",
       ],
     },
   ];
@@ -154,9 +248,7 @@ function Ficha() {
       <Grid container spacing={5} justifyContent="center" alignItems="center" style={{paddingTop:80, paddingBottom:80}}>
         <Grid item xs={12} sm={12} md={7}>
           <Typography style={{ padding: 10, margin: 40 }}>
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+            {selectedMovie.descripcion}
           </Typography>
         </Grid>
         <Grid item xs={12} sm={12} md={5} style={{ display: 'flex', justifyContent: 'center' }}>
