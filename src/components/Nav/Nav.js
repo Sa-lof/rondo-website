@@ -28,6 +28,8 @@ function Nav() {
         </label>
       </div>
       <label htmlFor="active" className="close"></label>
+      {/* Overlay */}
+      {isActive && <div className="overlay"></div>}
       <div className={`wrapper ${isActive ? "active" : ""}`}>
       {isActive && <label htmlFor="active" className="close">&#10006;</label>} {/* Close button */}
       <ul>
@@ -42,5 +44,6 @@ function Nav() {
     </>
   );
 }
+
 
 export default Nav;
