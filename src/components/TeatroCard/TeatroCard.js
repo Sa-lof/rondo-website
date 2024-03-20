@@ -7,7 +7,7 @@ import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline'; 
 
-function TeatroCard({title, mainImage, smallImages, duracion, ano }) {
+function TeatroCard({title, mainImage, smallImages, duracion, ano, onClick}) {
   const [selectedImage, setSelectedImage] = useState(mainImage);
   const [hover, setHover] = useState(false);
 
@@ -32,7 +32,7 @@ function TeatroCard({title, mainImage, smallImages, duracion, ano }) {
                 }}
               />
               {hover && ( 
-                <Grid
+                <Grid onClick={onClick}
                   container
                   sx={{
                     position: 'absolute', 
@@ -41,7 +41,8 @@ function TeatroCard({title, mainImage, smallImages, duracion, ano }) {
                     height: 300,
                     alignItems: 'center', 
                     justifyContent: 'center', 
-                    textAlign: 'center'
+                    textAlign: 'center',
+                    cursor: 'pointer'
                   }}
                 >
                   <IconButton size="large" sx={{ color: 'black', position: 'absolute', // Posición absoluta

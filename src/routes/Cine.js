@@ -48,7 +48,7 @@ const theme = createTheme({
 function Cine() {
   const navigate = useNavigate();
   const handleMovieClick = (movieId) => {
-    navigate(`/ficha/${movieId}`);
+    navigate(`/ficha/audiovisual/${movieId}`);
   };
 
   const movies = [
