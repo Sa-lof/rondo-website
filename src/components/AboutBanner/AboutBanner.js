@@ -22,6 +22,7 @@ const AboutBanner = () => {
                 maxHeight: { xs: '50vh', md: '100vh' },
                 objectFit: 'cover',
                 borderRadius: 10,
+                boxShadow: 3,
               },
             }}
           >

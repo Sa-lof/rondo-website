@@ -38,9 +38,7 @@ const ObjectiveBanner = () => {
                 fontSize: { xs: "0.875rem", sm: "1rem", md: "1.125rem" },
               }}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit...
-              {/* Keep the rest of the text */}
+              RONDO es una compañía productora de ideas creativas. Contamos historias a través de la imagen audiovisual. Para transmitir emociones de una manera innovadora y arriesgada.
             </Typography>
           </Box>
         </Grid>
@@ -59,7 +57,8 @@ const ObjectiveBanner = () => {
                 maxWidth: "100%",
                 objectFit: "cover",
                 maxHeight: { xs: "30vh", sm: "40vh", md: "50vh" },
-                borderRadius: 10
+                borderRadius: 10,
+                boxShadow: 3
               }}
               src={ObjectiveBannerPlaceholder}
               alt="Objective banner"
