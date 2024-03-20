@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import "../components/loader.css"; // Asegúrate de que este archivo exista y contenga otros estilos necesarios
 import Nav from "../components/Nav/Nav";
 import Grid from "@mui/material/Grid";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -56,9 +57,24 @@ function Teatro() {
     },
   ];
 
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2500); 
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <ThemeProvider theme={theme}>
       <Nav />
+      {loading && (
+  <div className="loader-container">
+    <div className="loader"></div>
+  </div>
+)}
       <Box sx={{ width: "100vw", boxSizing: "border-box", minHeight: "50vh", marginBottom: 5, paddingTop: 0}}>
         <Grid container spacing={0} sx={{ minHeight: {
                   xs: "25vh",
