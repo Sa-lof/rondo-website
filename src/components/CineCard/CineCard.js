@@ -32,7 +32,7 @@ function MovieCard({ title, duration, mainImage, smallImages, onClick }) { // AÃ
                 }}
               />
               {hover && (
-                <Grid
+                <Grid onClick={onClick}
                   container
                   sx={{
                     position: 'absolute', 
@@ -41,10 +41,11 @@ function MovieCard({ title, duration, mainImage, smallImages, onClick }) { // AÃ
                     height: 280,
                     alignItems: 'center', 
                     justifyContent: 'center', 
-                    textAlign: 'center'
+                    textAlign: 'center',
+                    cursor: 'pointer'
                   }}
                 >
-                  <IconButton onClick={onClick} size="large" sx={{ color: 'black', position: 'absolute', 
+                  <IconButton size="large" sx={{ color: 'black', position: 'absolute', 
                       top: 8, 
                       right: 8, }}>
                     <PlayCircleOutlineIcon sx={{ fontSize: '4rem' }} />

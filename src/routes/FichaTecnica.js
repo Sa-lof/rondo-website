@@ -14,6 +14,8 @@ import poster7 from '../assets/cine/Lucha/poster.jpeg';
 import laurel1 from '../assets/cine/ Confabulados/AMAR ES LIBERTAD_CONFABULADOS_OFFICIAL SELECTION - MAX3MIN FESTIVAL - 2021.png';
 import laurel2 from '../assets/cine/Amar/OFFICIAL SELECTION - CINEASTE INTERNATIONAL FILM FESTIVAL OF INDIA - CIFFI - 2022.png';
 import laurel3 from '../assets/contacto/RONDO LOGO.png';
+import mainImageSembrar from '../assets/cine/Bailar/1.jpeg';
+import mainImageEscrito from '../assets/cine/Escrito/1.png'
 
 import { useParams } from 'react-router-dom';
 
@@ -38,6 +40,7 @@ function Ficha() {
       idioma: "Español",
       poster: poster1,
       laureles: laurel3,
+      video: "https://player.vimeo.com/video/923592976?h=6c4c75b717",
       links: [
         {
           label: "IMDb",
@@ -67,6 +70,7 @@ function Ficha() {
       idioma: "Español",
       poster: poster2,
       laureles: laurel1,
+      video: "https://player.vimeo.com/video/923592308?h=d6192242fb",
       links: [
         {
           label: "IMDb",
@@ -105,6 +109,7 @@ function Ficha() {
       idioma: "Español",
       poster: poster3,
       laureles: laurel3,
+      imagentemp: mainImageSembrar,
       cast: [
         "Monica Gutierrez",
         "Alan Soto",
@@ -127,6 +132,7 @@ function Ficha() {
       idioma: "Español",
       poster: poster4,
       laureles: laurel2,
+      video: "https://player.vimeo.com/video/923592756?h=6d9e1c651c",
       links: [
         {
           label: "IMDb",
@@ -154,6 +160,7 @@ function Ficha() {
       idioma: "Español",
       poster: poster5,
       laureles: laurel3,
+      video: "https://www.youtube.com/embed/LDaNHoogfOY",
       links: [
         {
           label: "IMDb",
@@ -183,6 +190,7 @@ function Ficha() {
       idioma: "Español",
       poster: poster6,
       laureles: laurel3,
+      imagentemp: mainImageEscrito,
       links: [
         {
           label: "IMDb",
@@ -211,6 +219,7 @@ function Ficha() {
       idioma: "Español",
       poster: poster7,
       laureles: laurel3,
+      video: "https://player.vimeo.com/video/923593139?h=e5bd241bb9",
       links: [
         {
           label: "IMDb",
@@ -234,16 +243,49 @@ function Ficha() {
   return (
     <ThemeProvider theme={theme}>
       <Nav />
-      <div style={{ padding: "56.25% 0 0 0", position: "relative", paddingBottom:15}}>
-        <iframe 
-          src="https://player.vimeo.com/video/818467012?h=3c97dc420f&autoplay=1&title=0&byline=0&portrait=0" 
-          style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} 
-          frameBorder="0" 
-          allow="autoplay; fullscreen; picture-in-picture" 
-          allowFullScreen 
-          title="Unique Title for Iframe"
-        ></iframe>
-      </div>
+      {selectedMovie.video ? (
+        <div style={{ padding: "56.25% 0 0 0", position: "relative", paddingBottom: 15 }}>
+          <iframe
+            src={selectedMovie.video}
+            style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+            title="Unique Title for Iframe"
+          ></iframe>
+        </div>
+      ) : (
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            width: "100%",
+            padding: 3,
+          }}
+        >
+          <Card
+            sx={{
+              maxWidth: { xs: "100%", md: "100%", lg: "100%" },
+              mx: "auto",
+              textAlign: "center",
+              borderRadius: 10,
+              boxShadow: 3,
+            }}
+          >
+            <CardMedia
+              component="img"
+              image={selectedMovie.imagentemp}
+              alt={selectedMovie.title}
+              sx={{
+                maxWidth: "100%", 
+                maxHeight: { xs: 300, md: 550 },
+                objectFit: "cover",
+              }}
+            />
+          </Card>
+        </Box>
+      )}
       <FichaDecripcion {...selectedMovie} />
       <Grid container spacing={5} justifyContent="center" alignItems="center" style={{paddingTop:80, paddingBottom:80}}>
         <Grid item xs={12} sm={12} md={7}>
