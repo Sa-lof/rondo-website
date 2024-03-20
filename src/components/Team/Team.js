@@ -1,6 +1,5 @@
 import React from "react";
 import { Typography, Card, CardMedia, CardContent, Box } from "@mui/material";
-import TeamPlaceholder from "../../assets/placeholders/TeamPlaceholder.png";
 import logoImage from '../../assets/contacto/RONDO LOGO.png';
 
 const teamMember = {
