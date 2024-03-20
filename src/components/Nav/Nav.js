@@ -21,7 +21,7 @@ function Nav() {
       />
       <div className="navbar">
         <Link to="/" onClick={toggleMenu}>
-          <img src={logoImage} alt="Logo" className="logo" />
+          <img src={logoImage} alt="Logo" className="logo" style={{ width: "auto", height: "80px" }} />
         </Link>
         <label htmlFor="active" className="menu-btn">
           <span></span>

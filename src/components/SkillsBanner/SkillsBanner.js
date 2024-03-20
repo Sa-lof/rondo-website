@@ -48,7 +48,8 @@ const SkillsBanner = () => {
                 maxWidth: "100%",
                 objectFit: "cover",
                 maxHeight: { xs: "30vh", sm: "40vh", md: "50vh" },
-                borderRadius:10
+                borderRadius:10,
+                boxShadow: 3
               }}
               src={SkillsBannerPlaceholder}
               alt="Objective banner"
