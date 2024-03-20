@@ -16,6 +16,7 @@ import mainImageMama2 from '../assets/teatro/Mama/2.jpg';
 import mainImageMama3 from '../assets/teatro/Mama/3.jpg';
 import mainImageMama4 from '../assets/teatro/Mama/4.jpg';
 import Footer from "../components/Footer/Footer";
+import { useNavigate } from 'react-router-dom'; // Añadir esta línea
 
 const theme = createTheme({
     typography: {
@@ -23,6 +24,10 @@ const theme = createTheme({
     },
   });
 function Teatro() {
+  const navigate = useNavigate();
+  const handleMovieClick = (movieId) => {
+    navigate(`/ficha/teatro/${movieId}`); // Navega a la página de detalles de la película con el ID de la película
+  };
 
   const peliculas = [
     {
@@ -123,6 +128,7 @@ function Teatro() {
               smallImages={pelicula.smallImages}
               duracion={pelicula.duration}
               ano={pelicula.ano}
+              onClick={() => handleMovieClick(pelicula.id)}
             />
           </Grid>
         ))}

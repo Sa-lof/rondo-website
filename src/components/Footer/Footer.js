@@ -18,12 +18,6 @@ const Footer = () => {
               className="footer-logo"
             />
           </Grid>
-          <Grid item xs={12}>
-            <Typography variant="body1">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </Typography>
-          </Grid>
           <Grid item xs={12} sm={12}>
             <Box display="flex" justifyContent="center" alignItems="center">
               <Link href="https://www.instagram.com/rondo.productions/" target="_blank">
@@ -36,6 +30,12 @@ const Footer = () => {
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3enwwitVdsTzKe1O73kGule5HsYnRmAM2Lg&usqp=CAU" alt="IMDb Icon" style={{ width: '1.5rem', marginX: 1}} />
               </Link>
             </Box>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography variant="body1">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </Typography>
           </Grid>
           <Grid
             item

@@ -2,7 +2,8 @@ import React from 'react';
 import { Paper, Grid, Typography } from '@mui/material';
 
 function FichaDecripcion(props) {
-    const {duracion, dirigida, ano, idioma, cast, genero, produccion} = props;
+    const {duracion, dirigida, ano, cast, genero, produccion} = props;
+    const etiquetaDuracion = props.isPlay ? "DRAMATURGIA" : "DURACIÓN";
   return (
     <Paper elevation={0} style={{ padding: 10, margin: 40, borderBottom: '1px solid black' }}>
         <Grid container spacing={5}>
@@ -25,7 +26,7 @@ function FichaDecripcion(props) {
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
             <Typography variant="body1" display="block" gutterBottom>
-              DURACIÓN
+              {etiquetaDuracion}
             </Typography>
             <Typography variant="h3" display="block" gutterBottom sx={{
                             marginBottom: "20px",

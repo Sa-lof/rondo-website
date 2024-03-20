@@ -11,13 +11,16 @@ import poster4 from '../assets/cine/Amar/poster.png';
 import poster5 from '../assets/cine/turandot/poster.jpeg';
 import poster6 from '../assets/cine/Escrito/poster.jpeg';
 import poster7 from '../assets/cine/Lucha/poster.jpeg';
+import poster8 from '../assets/teatro/cu4tro/poster.jpeg';
+import poster9 from '../assets/teatro/Mama/POSTER.jpg';
 import laurel1 from '../assets/cine/ Confabulados/AMAR ES LIBERTAD_CONFABULADOS_OFFICIAL SELECTION - MAX3MIN FESTIVAL - 2021.png';
 import laurel2 from '../assets/cine/Amar/OFFICIAL SELECTION - CINEASTE INTERNATIONAL FILM FESTIVAL OF INDIA - CIFFI - 2022.png';
 import laurel3 from '../assets/contacto/RONDO LOGO.png';
 import mainImageSembrar from '../assets/cine/Bailar/1.jpeg';
 import mainImageEscrito from '../assets/cine/Escrito/1.png'
-
-import { useParams } from 'react-router-dom';
+import mainImageCu4tro from '../assets/teatro/cu4tro/1.jpg'
+import mainImageMama from '../assets/teatro/Mama/1.jpg'
+import { useParams, useLocation } from 'react-router-dom';
 
 const theme = createTheme({
   typography: {
@@ -26,7 +29,8 @@ const theme = createTheme({
 });
 function Ficha() {
   const { id } = useParams();
-  console.log(id);
+  const location = useLocation();
+  const isCine = location.pathname.includes("ficha/audiovisual"); 
 
   const movies = [
     {
@@ -161,13 +165,6 @@ function Ficha() {
       poster: poster5,
       laureles: laurel3,
       video: "https://www.youtube.com/embed/LDaNHoogfOY",
-      links: [
-        {
-          label: "IMDb",
-          url: "https://www.imdb.com/title/tt31462225/?ref_=ext_shr_lnk",
-          icon: "https://cdn.icon-icons.com/icons2/2622/PNG/512/brand_imdb_icon_158850.png",
-        },
-      ],
       cast: [
         "Kaveh Parmas",
         "Daniela Momo",
@@ -191,13 +188,6 @@ function Ficha() {
       poster: poster6,
       laureles: laurel3,
       imagentemp: mainImageEscrito,
-      links: [
-        {
-          label: "IMDb",
-          url: "https://www.imdb.com/title/tt31462225/?ref_=ext_shr_lnk",
-          icon: "https://cdn.icon-icons.com/icons2/2622/PNG/512/brand_imdb_icon_158850.png",
-        },
-      ],
       cast: [
         "Melissa Martz",
         "Jose María Esquivel",
@@ -220,13 +210,6 @@ function Ficha() {
       poster: poster7,
       laureles: laurel3,
       video: "https://player.vimeo.com/video/923593139?h=e5bd241bb9",
-      links: [
-        {
-          label: "IMDb",
-          url: "https://www.imdb.com/title/tt31462225/?ref_=ext_shr_lnk",
-          icon: "https://cdn.icon-icons.com/icons2/2622/PNG/512/brand_imdb_icon_158850.png",
-        },
-      ],
       cast: [
         "Danna",
         "Nidia Bermejo",
@@ -238,7 +221,55 @@ function Ficha() {
     },
   ];
 
-  const selectedMovie = movies.find(movie => movie.id === id);
+  const plays = [
+    {
+      id:"1",
+      title: "Cu4tro Cu4rtos",
+      duracion: "Sebastián Rigel",
+      dirigida: "Omar Drioli",
+      produccion: "Rondo",
+      ano: "2022 y 2023",
+      descripcion: "Cu4tro Cu4rtos es una antología de microteatro que roza lo surreal sin perder su centro humano. Conformada por 4 historias y 4 habitaciones de una casa en épocas distintas, tenemos a un electricista hablando con nadie; dos colegas que buscan desesperadamente razones para no hacer algo; una pareja que lidia con el miedo al silencio; y una caja con el mejor café del mundo. Una experiencia breve pero meticulosa.",
+      idioma: "Español",
+      poster: poster8,
+      laureles: laurel3,
+      imagentemp: mainImageCu4tro,
+      cast: [
+        "Lilly Maldonado",
+        "Santiago Bautista",
+        "Paulina Barrientos",
+        "Julio Cesar Mejía",
+        "Analú Flores",
+      ],
+      genero: [
+        "Drama",
+      ],
+    },
+    {
+      id:"2",
+      title: "Mamá",
+      duracion: "Jerry Vega",
+      dirigida: "Jerry Vega",
+      produccion: "Rondo",
+      ano: "2023",
+      descripcion: "Mamá se va, dejando a Catalina y a sus dos hermanos menores en casa en pleno 1985 en Ciudad de México. Catalina crea una mentira lunar para mantener el corazón de sus hermanos intacto, mentira que cada vez es más difícil de sostener. Los años pasan rápido sobre la familia, la mentira lunar es descubierta y los recuerdos son un monstruo que persigue a Catalina hasta que… ella misma, en un reencuentro inesperado, encuentra la verdad.",
+      idioma: "Español",
+      poster: poster9,
+      laureles: laurel3,
+      imagentemp: mainImageMama,
+      cast: [
+        "Omar Drioli",
+        "Analú Flores",
+      ],
+      genero: [
+        "Drama",
+      ],
+    },
+  ];
+
+  const dataList = isCine ? movies : plays;
+
+  const selectedMovie = dataList.find(movie => movie.id === id);
 
   return (
     <ThemeProvider theme={theme}>
@@ -286,7 +317,7 @@ function Ficha() {
           </Card>
         </Box>
       )}
-      <FichaDecripcion {...selectedMovie} />
+      <FichaDecripcion {...selectedMovie} isPlay={location.pathname.includes("ficha/teatro")} />
       <Grid container spacing={5} justifyContent="center" alignItems="center" style={{paddingTop:80, paddingBottom:80}}>
         <Grid item xs={12} sm={12} md={7}>
           <Typography style={{ padding: 10, margin: 40 }}>
@@ -339,9 +370,6 @@ function Ficha() {
       key={index}
       aria-label={link.label}
       onClick={() => window.open(link.url, '_blank')}
-      sx={{
-        // Add custom styles if needed
-      }}
     >
       <img src={link.icon} alt={link.label} style={{ width: 60, height: 60 }} />
     </IconButton>
