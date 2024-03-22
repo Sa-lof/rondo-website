@@ -274,7 +274,7 @@ function Ficha() {
     const timer = setTimeout(() => {
       setLoading(false);
       window.scrollTo(0, 0); // Esto hace que la página se desplaza al principio cuando se carga
-    }, 2500); 
+    }, 1500); 
 
     return () => clearTimeout(timer);
   }, []);
