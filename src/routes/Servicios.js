@@ -4,12 +4,6 @@ import Nav from "../components/Nav/Nav";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Service from "../components/Services/Services";
 import Grid from "@mui/material/Grid";
-import service1 from '../assets/services/01Publicidad.jpg';
-import service2 from '../assets/services/02Cine.jpeg';
-import service3 from '../assets/services/03Video musical.png';
-import service4 from '../assets/services/Social y Corporativo.jpg';
-import service5 from '../assets/services/05PostProducción.png';
-import service6 from '../assets/services/06Teatro.jpg';
 import Typography from "@mui/material/Typography";
 import Footer from "../components/Footer/Footer";
 import loaderGif from '../assets/RONDO LOGO.gif';
@@ -21,12 +15,12 @@ const theme = createTheme({
 });
 
 const servicesData = [
-  { title: "Cine", imagen: service2},
-  { title: "Publicidad", imagen: service1},
-  { title: "Video musical", imagen: service3 },
-  { title: "Social y corporativo", imagen: service4},
-  { title: "Post Producción", imagen: service5},
-  { title: "Teatro", imagen: service6},
+  { title: "Cine", imagen: 'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/servicios/02Cine.jpeg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvc2VydmljaW9zLzAyQ2luZS5qcGVnIiwiaWF0IjoxNzExMDgyOTEyLCJleHAiOjE3NDI2MTg5MTJ9.UhYXBsPAJ7nJXA-sM4svsAwu9zn5PNG2zx7rS_bAwcU&t=2024-03-22T04%3A49%3A49.949Z'},
+  { title: "Publicidad", imagen: 'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/servicios/01Publicidad.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvc2VydmljaW9zLzAxUHVibGljaWRhZC5qcGciLCJpYXQiOjE3MTEwODI4ODksImV4cCI6MTc0MjYxODg4OX0.7sbHFzLX9ij908eOLXA_TMgOCpHfLmQYe0IhwwLvfMQ&t=2024-03-22T04%3A49%3A27.397Z'},
+  { title: "Video musical", imagen: 'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/servicios/03Video%20musical.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvc2VydmljaW9zLzAzVmlkZW8gbXVzaWNhbC5wbmciLCJpYXQiOjE3MTEwODI5MjQsImV4cCI6MTc0MjYxODkyNH0.MIkhYnNzNwnyCUeBf-6zdQoiEtc8ltElBlwP79ohMTs&t=2024-03-22T04%3A50%3A02.048Z' },
+  { title: "Social y corporativo", imagen: 'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/servicios/Social%20y%20Corporativo.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvc2VydmljaW9zL1NvY2lhbCB5IENvcnBvcmF0aXZvLmpwZyIsImlhdCI6MTcxMTA4MjkzMywiZXhwIjoxNzQyNjE4OTMzfQ.mWnQh1EuWyiWIWk1BJSL9T7_0MiLuZtE5LXBJMNcfD0&t=2024-03-22T04%3A50%3A10.898Z'},
+  { title: "Post Producción", imagen: 'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/servicios/05PostProduccion.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvc2VydmljaW9zLzA1UG9zdFByb2R1Y2Npb24ucG5nIiwiaWF0IjoxNzExMDgyOTUwLCJleHAiOjE3NDI2MTg5NTB9.qFQVxKEmXJilKP66EUYKKMUvPOIgGaICtx3UAXDQVJs&t=2024-03-22T04%3A50%3A28.505Z'},
+  { title: "Teatro", imagen: 'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/servicios/06Teatro.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvc2VydmljaW9zLzA2VGVhdHJvLmpwZyIsImlhdCI6MTcxMTA4Mjk2MCwiZXhwIjoxNzQyNjE4OTYwfQ.yANfogkfTSpqrWm3kEIRhzSSrmz0nCnamxaQN-7jPfA&t=2024-03-22T04%3A50%3A38.478Z'},
 ];
 
 function Servicios() {
@@ -35,7 +29,7 @@ function Servicios() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2500); 
+    }, 1500); 
 
     return () => clearTimeout(timer);
   }, []);

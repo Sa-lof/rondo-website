@@ -5,15 +5,6 @@ import FichaDecripcion from "../components/FichaDescripcion/FichaDescripción";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Footer from "../components/Footer/Footer";
 import { Grid, Typography, Box, Card, CardMedia, IconButton} from '@mui/material';
-import poster1 from '../assets/cine/Sembrar/poster.png';
-import poster2 from '../assets/cine/ Confabulados/poster.png';
-import poster3 from '../assets/cine/Bailar/poster.png';
-import poster4 from '../assets/cine/Amar/poster.png';
-import poster5 from '../assets/cine/turandot/poster.jpeg';
-import poster6 from '../assets/cine/Escrito/poster.jpeg';
-import poster7 from '../assets/cine/Lucha/poster.jpeg';
-import poster8 from '../assets/teatro/cu4tro/poster.jpeg';
-import poster9 from '../assets/teatro/Mama/POSTER.jpg';
 import laurel1 from '../assets/cine/ Confabulados/AMAR ES LIBERTAD_CONFABULADOS_OFFICIAL SELECTION - MAX3MIN FESTIVAL - 2021.png';
 import laurel2 from '../assets/cine/Amar/OFFICIAL SELECTION - CINEASTE INTERNATIONAL FILM FESTIVAL OF INDIA - CIFFI - 2022.png';
 import laurel3 from '../assets/contacto/RONDO LOGO.png';
@@ -44,7 +35,7 @@ function Ficha() {
       ano: "2023",
       descripcion: "En un mundo donde la naturaleza esta por desaparecer, un grupo de amigas se reune por última vez para salvar al planeta Tierra. ",
       idioma: "Español",
-      poster: poster1,
+      poster: 'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/cine/sembrar/poster.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvY2luZS9zZW1icmFyL3Bvc3Rlci5wbmciLCJpYXQiOjE3MTEwODMwMjYsImV4cCI6MTc0MjYxOTAyNn0.sLbMhCvfyPrr0HBXx3sScFB9DRC1oUq85HEsnPI3dXU&t=2024-03-22T04%3A51%3A44.419Z',
       laureles: laurel3,
       video: "https://player.vimeo.com/video/923592976?h=6c4c75b717",
       links: [
@@ -74,7 +65,7 @@ function Ficha() {
       ano: "2021",
       descripcion: "Poesía audiovisual que explora las emociones de conectar por primera vez, a través, de una conversación atemporal que construyen momentos del pasasdo.",
       idioma: "Español",
-      poster: poster2,
+      poster: 'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/cine/confabulados/poster.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvY2luZS9jb25mYWJ1bGFkb3MvcG9zdGVyLnBuZyIsImlhdCI6MTcxMTA4MzEwNCwiZXhwIjoxNzQyNjE5MTA0fQ.Mf7BPZbjEz9Lc6uGqnm9EufXVjLcxgBUNxRrCWe7cv8&t=2024-03-22T04%3A53%3A03.274Z',
       laureles: laurel1,
       video: "https://player.vimeo.com/video/923592308?h=d6192242fb",
       links: [
@@ -113,7 +104,7 @@ function Ficha() {
       ano: "Post producción",
       descripcion: "Sara terminó una relación que no le permitía ser quien era. Le cuesta volver a confiar en lo que siente. En su camino de seguir adelante conoce a Uriel. Él sin buscarlo, le contagia su manera de ver la vida, de vivir el momento, de estar presentes el uno para el otro y de darse cuenta que el amor no siempre funciona, pero a veces solo se necesita una canción y volver a intentarlo.",
       idioma: "Español",
-      poster: poster3,
+      poster: 'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/cine/bailar/poster.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvY2luZS9iYWlsYXIvcG9zdGVyLnBuZyIsImlhdCI6MTcxMTA4MzEyMCwiZXhwIjoxNzQyNjE5MTIwfQ.nA3_KEYPV5JytaIpAXrHGThKnig573P76llIG8ML8D8&t=2024-03-22T04%3A53%3A18.351Z',
       laureles: laurel3,
       imagentemp: mainImageSembrar,
       cast: [
@@ -136,7 +127,7 @@ function Ficha() {
       ano: "2022",
       descripcion: "Un cortrometraje narrado a través de la voz de Titania, una mujer que se alimenta de las almas culpables que habitan el planeta Tierra, buscando sembrar una flor de amor y esperanza por cada vida que ha vengado.",
       idioma: "Español",
-      poster: poster4,
+      poster: 'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/cine/amar/poster.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvY2luZS9hbWFyL3Bvc3Rlci5wbmciLCJpYXQiOjE3MTEwODMxMzUsImV4cCI6MTc0MjYxOTEzNX0.TIvn0BCO7rClZnB5mtMCRJnPwfnGCGD6CzLvVeWZAGU&t=2024-03-22T04%3A53%3A33.280Z',
       laureles: laurel2,
       video: "https://player.vimeo.com/video/923592756?h=6d9e1c651c",
       links: [
@@ -164,7 +155,7 @@ function Ficha() {
       descripcion: "Live session de la música de la obra de teatro: La verdadera historia de la princesa turandot, en un formato estilo live session para su promoción en redes.",
       ano: "2024",
       idioma: "Español",
-      poster: poster5,
+      poster: 'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/cine/turandot/poster.jpeg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvY2luZS90dXJhbmRvdC9wb3N0ZXIuanBlZyIsImlhdCI6MTcxMTA4MzE0OCwiZXhwIjoxNzQyNjE5MTQ4fQ.dChTNJMwqsz1H7F57ufHtkTUZuH6cSBva0vWFoTde7w&t=2024-03-22T04%3A53%3A46.527Z',
       laureles: laurel3,
       video: "https://www.youtube.com/embed/LDaNHoogfOY",
       cast: [
@@ -187,7 +178,7 @@ function Ficha() {
       ano: "Post producción",
       descripcion: "Videoclip de la pieza original “Escrito y hecho”, una balada sobre letras, olvido y fotografías. ",
       idioma: "Español",
-      poster: poster6,
+      poster: 'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/cine/escrito/poster.jpeg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvY2luZS9lc2NyaXRvL3Bvc3Rlci5qcGVnIiwiaWF0IjoxNzExMDgzMTYxLCJleHAiOjE3NDI2MTkxNjF9.lcBjFfGj6ZOg-phPbOuS1-2gfAL0awenYmCXfhd5RCE&t=2024-03-22T04%3A53%3A59.402Z',
       laureles: laurel3,
       imagentemp: mainImageEscrito,
       cast: [
@@ -209,7 +200,7 @@ function Ficha() {
       ano: "2023",
       descripcion: "Valentina es una niña a la que no solo le fascina la lucha libre, sino que también algún día aspira a ser luchadora. Sin embargo, los sistemas y sociedad no dejan que ella logre ese sueño.",
       idioma: "Español",
-      poster: poster7,
+      poster: 'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/cine/lucha/poster.jpeg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvY2luZS9sdWNoYS9wb3N0ZXIuanBlZyIsImlhdCI6MTcxMTA4MzE3MiwiZXhwIjoxNzQyNjE5MTcyfQ.JgjscgOxG9zmPEbUs3BfDGe4xxx7CCOZiLKaFEZpnSw&t=2024-03-22T04%3A54%3A10.401Z',
       laureles: laurel3,
       video: "https://player.vimeo.com/video/923593139?h=e5bd241bb9",
       cast: [
@@ -233,7 +224,7 @@ function Ficha() {
       ano: "2022 y 2023",
       descripcion: "Cu4tro Cu4rtos es una antología de microteatro que roza lo surreal sin perder su centro humano. Conformada por 4 historias y 4 habitaciones de una casa en épocas distintas, tenemos a un electricista hablando con nadie; dos colegas que buscan desesperadamente razones para no hacer algo; una pareja que lidia con el miedo al silencio; y una caja con el mejor café del mundo. Una experiencia breve pero meticulosa.",
       idioma: "Español",
-      poster: poster8,
+      poster: 'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/teatro/cu4tro/poster.jpeg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvdGVhdHJvL2N1NHRyby9wb3N0ZXIuanBlZyIsImlhdCI6MTcxMTA4MzIxNiwiZXhwIjoxNzQyNjE5MjE2fQ.CkTYOxhA47P5jd_Z9qBbO4pLfhxRDfNqzxQiZVaKjHg&t=2024-03-22T04%3A54%3A54.385Z',
       laureles: laurel3,
       imagentemp: mainImageCu4tro,
       cast: [
@@ -260,7 +251,7 @@ function Ficha() {
       ano: "2023",
       descripcion: "Mamá se va, dejando a Catalina y a sus dos hermanos menores en casa en pleno 1985 en Ciudad de México. Catalina crea una mentira lunar para mantener el corazón de sus hermanos intacto, mentira que cada vez es más difícil de sostener. Los años pasan rápido sobre la familia, la mentira lunar es descubierta y los recuerdos son un monstruo que persigue a Catalina hasta que… ella misma, en un reencuentro inesperado, encuentra la verdad.",
       idioma: "Español",
-      poster: poster9,
+      poster: 'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/teatro/cu4tro/poster.jpeg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvdGVhdHJvL2N1NHRyby9wb3N0ZXIuanBlZyIsImlhdCI6MTcxMTA4MzIxNiwiZXhwIjoxNzQyNjE5MjE2fQ.CkTYOxhA47P5jd_Z9qBbO4pLfhxRDfNqzxQiZVaKjHg&t=2024-03-22T04%3A54%3A54.385Z',
       laureles: laurel3,
       imagentemp: mainImageMama,
       cast: [
