@@ -4,6 +4,7 @@ import { Paper, Grid, Typography } from '@mui/material';
 function FichaDecripcion(props) {
     const {duracion, dirigida, ano, cast, genero, produccion} = props;
     const etiquetaDuracion = props.isPlay ? "DRAMATURGIA" : "DURACIÓN";
+    const produccionLabel = props.isPlay && props.id === "2" ? "MÚSICA ORIGINAL" : "PRODUCCIÓN";
   return (
     <Paper elevation={0} style={{ padding: 10, margin: 40, borderBottom: '1px solid black' }}>
         <Grid container spacing={5}>
@@ -66,7 +67,7 @@ function FichaDecripcion(props) {
           </Grid>
           <Grid item xs={12} sm={12} md={4}>
             <Typography variant="body1" display="block" gutterBottom>
-              PRODUCCIÓN
+            {produccionLabel}
             </Typography>
             <Typography variant="h3" display="block" gutterBottom sx={{
                             marginBottom: "20px",

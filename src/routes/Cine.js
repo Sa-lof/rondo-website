@@ -38,6 +38,8 @@ import mainImageLucha2 from '../assets/cine/Lucha/2.png';
 import mainImageLucha3 from '../assets/cine/Lucha/3.png';
 import mainImageLucha4 from '../assets/cine/Lucha/4.png';
 import { useNavigate } from 'react-router-dom'; // Añadir esta línea
+import loaderGif from '../assets/RONDO LOGO.gif';
+
 const CineCard = React.lazy(() => import("../components/CineCard/CineCard"));
 
 const theme = createTheme({
@@ -78,7 +80,7 @@ function Cine() {
     {
       id:"7",
       title: "La lucha",
-      duration: "Cortrometraje Original",
+      duration: "Cortrometraje",
       mainImage: mainImageLucha1,
       smallImages: [
         mainImageLucha2,
@@ -179,12 +181,13 @@ function Cine() {
     <ThemeProvider theme={theme}>
       <Nav />
       {loading && (
-  <div className="loader-container">
-    <div className="loader"></div>
-  </div>
-)}
+        <div className="loader-container">
+          <img src={loaderGif} alt="Cargando..." style={{ width: "200px", height: "200px" }} />
+        </div>
+      )}
       <Box sx={{ width: "100vw", boxSizing: "border-box", minHeight: "50vh", marginBottom: 5, paddingTop: 7}}>
-      <Grid container spacing={0} sx={{ minHeight: {
+        {/*
+        <Grid container spacing={0} sx={{ minHeight: {
                   xs: "25vh",
                   sm: "30vh",
                   md: "35vh",
@@ -242,30 +245,30 @@ function Cine() {
               </Typography>
             </Box>
           </Grid>
-        </Grid>
-        <Box sx={{
-  flexGrow: 1,
-  overflow: "hidden",
-  backgroundImage: `
-    repeating-linear-gradient(-45deg, black, black 10px, transparent 10px, transparent 20px),
-    repeating-linear-gradient(-45deg, black, black 10px, transparent 10px, transparent 20px)
-  `,
-  backgroundRepeat: "no-repeat",
-  backgroundSize: "100% 20px",
-  backgroundPosition: "top, bottom",
-  paddingBottom: 3,
-  paddingTop: 3,
-}}>
-  <Slider {...settings}>
-    {movies.map((movie, index) => (
-      <Box key={index} sx={{ textAlign: "center"}}>
-        <Typography variant="h6" component="h2" sx={{fontWeight: "bold", marginTop:1.5,  marginBottom:1.5}}>
-          {movie.title}
-        </Typography>
+        </Grid>*/}
+      <Box sx={{
+        flexGrow: 1,
+        overflow: "hidden",
+        backgroundImage: `
+          repeating-linear-gradient(-45deg, black, black 10px, transparent 10px, transparent 20px),
+          repeating-linear-gradient(-45deg, black, black 10px, transparent 10px, transparent 20px)
+        `,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "100% 20px",
+        backgroundPosition: "top, bottom",
+        paddingBottom: 3,
+        paddingTop: 3,
+      }}>
+        <Slider {...settings}>
+          {movies.map((movie, index) => (
+            <Box key={index} sx={{ textAlign: "center"}}>
+              <Typography variant="h6" component="h2" sx={{fontWeight: "bold", marginTop:1.5,  marginBottom:1.5}}>
+                {movie.title}
+              </Typography>
+            </Box>
+          ))}
+        </Slider>
       </Box>
-    ))}
-  </Slider>
-</Box>
 
           <Suspense fallback={<div>Cargando...</div>}>
             <Grid container spacing={5} sx={{ marginTop: 4, padding: 5 }}>
