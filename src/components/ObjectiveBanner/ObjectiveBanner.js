@@ -2,7 +2,6 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import ObjectiveBannerPlaceholder from '../../assets/nosotros/Nuestro obj.jpg';
 
 const ObjectiveBanner = () => {
   return (
@@ -60,7 +59,7 @@ const ObjectiveBanner = () => {
                 borderRadius: 10,
                 boxShadow: 3
               }}
-              src={ObjectiveBannerPlaceholder}
+              src='https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/nosotros/Nuestro%20obj.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvbm9zb3Ryb3MvTnVlc3RybyBvYmouanBnIiwiaWF0IjoxNzExMDc0MzQ1LCJleHAiOjE3NDI2MTAzNDV9.LYHGMdKaqEeLIfnbB7vsSPOBBZ-bH0lo9RdkH54bfn8&t=2024-03-22T02%3A27%3A02.881Z'
               alt="Objective banner"
             />
           </Box>
