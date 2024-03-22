@@ -3,7 +3,7 @@ import "../components/loader.css"; // Asegúrate de que este archivo exista y co
 import Nav from "../components/Nav/Nav";
 import Grid from "@mui/material/Grid";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import Typography from "@mui/material/Typography";
+//import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -18,6 +18,7 @@ import mainImageMama3 from '../assets/teatro/Mama/3.jpg';
 import mainImageMama4 from '../assets/teatro/Mama/4.jpg';
 import Footer from "../components/Footer/Footer";
 import { useNavigate } from 'react-router-dom'; // Añadir esta línea
+import loaderGif from '../assets/RONDO LOGO.gif';
 
 const theme = createTheme({
     typography: {
@@ -72,11 +73,11 @@ function Teatro() {
       <Nav />
       {loading && (
   <div className="loader-container">
-    <div className="loader"></div>
+    <img src={loaderGif} alt="Cargando..." style={{ width: "200px", height: "200px" }} />
   </div>
 )}
       <Box sx={{ width: "100vw", boxSizing: "border-box", minHeight: "50vh", marginBottom: 5, paddingTop: 0}}>
-        <Grid container spacing={0} sx={{ minHeight: {
+        {/*<Grid container spacing={0} sx={{ minHeight: {
                   xs: "25vh",
                   sm: "30vh",
                   md: "35vh",
@@ -134,7 +135,7 @@ function Teatro() {
               </Typography>
             </Box>
           </Grid>
-        </Grid>
+        </Grid> */}
         <Grid container spacing={10} sx={{ padding: 3 }}>
         {peliculas.map((pelicula, index) => (
           <Grid item xs={12} sm={12} md={12} key={index}>

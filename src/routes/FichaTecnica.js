@@ -22,6 +22,7 @@ import mainImageEscrito from '../assets/cine/Escrito/1.png'
 import mainImageCu4tro from '../assets/teatro/cu4tro/1.jpg'
 import mainImageMama from '../assets/teatro/Mama/1.jpg'
 import { useParams, useLocation } from 'react-router-dom';
+import loaderGif from '../assets/RONDO LOGO.gif';
 
 const theme = createTheme({
   typography: {
@@ -191,7 +192,7 @@ function Ficha() {
       imagentemp: mainImageEscrito,
       cast: [
         "Melissa Martz",
-        "Jose María Esquivel",
+        "Josemaría Esquivel",
         "Alejandra Campos",
         "Azul Balderas",
       ],
@@ -277,6 +278,7 @@ function Ficha() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
+      window.scrollTo(0, 0); // Esto hace que la página se desplaza al principio cuando se carga
     }, 2500); 
 
     return () => clearTimeout(timer);
@@ -287,7 +289,7 @@ function Ficha() {
       <Nav />
       {loading && (
   <div className="loader-container">
-    <div className="loader"></div>
+    <img src={loaderGif} alt="Cargando..." style={{ width: "200px", height: "200px" }} />
   </div>
 )}
       {selectedMovie.video ? (
