@@ -186,7 +186,6 @@ function Cine() {
         </div>
       )}
       <Box sx={{ width: "100vw", boxSizing: "border-box", minHeight: "50vh", marginBottom: 5, paddingTop: 7}}>
-        {/*
         <Grid container spacing={0} sx={{ minHeight: {
                   xs: "25vh",
                   sm: "30vh",
@@ -228,7 +227,7 @@ function Cine() {
                   fontWeight: "bold",
                 }}
               >
-                Viaja más allá de la pantalla
+                “¡Por primera vez en toda mi vida, sé lo que quiero hacer! ¡Y por primera vez, lo haré!”.
               </Typography>
               <Typography
                 variant="subtitle1"
@@ -241,11 +240,11 @@ function Cine() {
                   },
                 }}
               >
-              y adéntrate en la magia de nuestro trabajo cinematográfico
+              - La sociedad de los poetas muertos
               </Typography>
             </Box>
           </Grid>
-        </Grid>*/}
+        </Grid>
       <Box sx={{
         flexGrow: 1,
         overflow: "hidden",

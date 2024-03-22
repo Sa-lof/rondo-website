@@ -3,7 +3,7 @@ import "../components/loader.css"; // Asegúrate de que este archivo exista y co
 import Nav from "../components/Nav/Nav";
 import Grid from "@mui/material/Grid";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-//import Typography from "@mui/material/Typography";
+import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -77,7 +77,7 @@ function Teatro() {
   </div>
 )}
       <Box sx={{ width: "100vw", boxSizing: "border-box", minHeight: "50vh", marginBottom: 5, paddingTop: 0}}>
-        {/*<Grid container spacing={0} sx={{ minHeight: {
+        <Grid container spacing={0} sx={{ minHeight: {
                   xs: "25vh",
                   sm: "30vh",
                   md: "35vh",
@@ -118,7 +118,7 @@ function Teatro() {
                   fontWeight: "bold",
                 }}
               >
-                Traspasa las cortinas
+                “El teatro no se hace para cantar las cosas sino para cambiarlas"
               </Typography>
               <Typography
                 variant="subtitle1"
@@ -131,11 +131,11 @@ function Teatro() {
                   },
                 }}
               >
-                y descubre la intensidad de nuestras producciones en cada acto
+                 – Vittorio Gassman
               </Typography>
             </Box>
           </Grid>
-        </Grid> */}
+        </Grid>
         <Grid container spacing={10} sx={{ padding: 3 }}>
         {peliculas.map((pelicula, index) => (
           <Grid item xs={12} sm={12} md={12} key={index}>
