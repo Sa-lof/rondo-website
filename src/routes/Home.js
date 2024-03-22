@@ -18,6 +18,7 @@ function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
+      window.scrollTo(0, 0);
     }, 1500); 
 
     return () => clearTimeout(timer);
