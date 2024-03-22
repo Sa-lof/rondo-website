@@ -4,6 +4,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Footer from "../components/Footer/Footer";
 import ContactForm from "../components/ContactForm/ContactForm";
 import "../components/loader.css"; // Asegúrate de que este archivo exista y contenga otros estilos necesarios
+import loaderGif from '../assets/RONDO LOGO.gif';
 
 const theme = createTheme({
     typography: {
@@ -16,7 +17,7 @@ function Contacto() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 4000); 
+    }, 2500); 
 
     return () => clearTimeout(timer);
   }, []);
@@ -25,7 +26,7 @@ function Contacto() {
       <Nav />
       {loading && (
   <div className="loader-container">
-    <div className="loader"></div>
+    <img src={loaderGif} alt="Cargando..." style={{ width: "200px", height: "200px" }} />
   </div>
 )}
       <ContactForm />

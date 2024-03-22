@@ -8,6 +8,7 @@ import SkillsBanner from "../components/SkillsBanner/SkillsBanner";
 import Team from "../components/Team/Team";
 import ContactBanner from "../components/ContactBanner/ContactBanner";
 import Footer from "../components/Footer/Footer";
+import loaderGif from '../assets/RONDO LOGO.gif';
 
 const theme = createTheme({
   typography: {
@@ -20,7 +21,7 @@ function Nosotros() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 4000); 
+    }, 2500); 
 
     return () => clearTimeout(timer);
   }, []);
@@ -29,7 +30,7 @@ function Nosotros() {
       <Nav />
       {loading && (
   <div className="loader-container">
-    <div className="loader"></div>
+    <img src={loaderGif} alt="Cargando..." style={{ width: "200px", height: "200px" }} />
   </div>
 )}
       <AboutBanner />

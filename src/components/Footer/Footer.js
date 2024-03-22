@@ -42,8 +42,7 @@ const Footer = () => {
           </Grid>
           <Grid item xs={12}>
             <Typography variant="body1">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Somos una compañía productora de ideas creativas. Contamos historias a través de la imagen audiovisual.
             </Typography>
           </Grid>
           <Grid

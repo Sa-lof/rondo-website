@@ -3,7 +3,7 @@ import { Typography, Card, CardMedia, CardContent, Box } from "@mui/material";
 import logoImage from '../../assets/contacto/RONDO LOGO.png';
 
 const teamMember = {
-  name: "Omar Drioli y Sebastián Rige",
+  name: "Omar Drioli y Sebastián Rigel",
   position: "Socios",
   image: logoImage,
 };

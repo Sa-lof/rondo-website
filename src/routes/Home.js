@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Nav from "../components/Nav/Nav";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "../components/loader.css"; // Asegúrate de que este archivo exista y contenga otros estilos necesarios
-
+import loaderGif from '../assets/RONDO LOGO.gif';
 const theme = createTheme({
   typography: {
     fontFamily: ["Sono", "monospace"].join(","),
@@ -15,7 +15,7 @@ function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 4000); 
+    }, 2500); 
 
     return () => clearTimeout(timer);
   }, []);
@@ -25,7 +25,7 @@ function Home() {
       <Nav />
       {loading && (
   <div className="loader-container">
-    <div className="loader"></div>
+    <img src={loaderGif} alt="Cargando..." style={{ width: "200px", height: "200px" }} />
   </div>
 )}
       <div style={{ visibility: loading ? "hidden" : "visible", padding: "56.25% 0 0 0", position: "relative" }}>

@@ -12,6 +12,7 @@ import service5 from '../assets/services/05PostProducción.png';
 import service6 from '../assets/services/06Teatro.jpg';
 import Typography from "@mui/material/Typography";
 import Footer from "../components/Footer/Footer";
+import loaderGif from '../assets/RONDO LOGO.gif';
 
 const theme = createTheme({
   typography: {
@@ -34,7 +35,7 @@ function Servicios() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 4000); 
+    }, 2500); 
 
     return () => clearTimeout(timer);
   }, []);
@@ -44,7 +45,7 @@ function Servicios() {
       <Nav />
       {loading && (
   <div className="loader-container">
-    <div className="loader"></div>
+    <img src={loaderGif} alt="Cargando..." style={{ width: "200px", height: "200px" }} />
   </div>
 )}
       <Grid container spacing={3}>
