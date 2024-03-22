@@ -46,13 +46,14 @@ const AboutBanner = () => {
               variant="h2"
               gutterBottom
               sx={{
-                fontSize: { xs: '30px', sm: '48px', md: '64px' },
+                fontSize: { xs: '30px', sm: '44px', md: '40px',  lg: '50px' },
                 fontWeight: 'bold',
                 lineHeight: 'normal',
               }}
             >
-              “¡Por primera vez en toda mi vida, sé lo que quiero hacer! ¡Y por primera vez, lo haré!”.
+              RONDO es una compañía productora de ideas creativas. Contamos historias a través de la imagen audiovisual, para transmitir emociones de una manera innovadora y arriesgada.
             </Typography>
+            {/*
             <Typography
               variant="h6"
               sx={{
@@ -61,7 +62,7 @@ const AboutBanner = () => {
               }}
             >
               - La sociedad de los poetas muertos
-            </Typography>
+            </Typography>*/}
           </Box>
         </Grid>
       </Grid>

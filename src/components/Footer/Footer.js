@@ -42,7 +42,7 @@ const Footer = () => {
           </Grid>
           <Grid item xs={12}>
             <Typography variant="body1">
-              Somos una compañía productora de ideas creativas. Contamos historias a través de la imagen audiovisual.
+              Ojalá nuestras palabras curen heridas y abran párpados cerrados. Que vivan para siempre y den brillo a quienes quieran escucharlas.
             </Typography>
           </Grid>
           <Grid
