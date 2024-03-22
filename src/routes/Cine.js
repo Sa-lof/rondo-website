@@ -34,7 +34,7 @@ function Cine() {
       mainImage: 'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/cine/turandot/1.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvY2luZS90dXJhbmRvdC8xLnBuZyIsImlhdCI6MTcxMTA3NDg2OSwiZXhwIjoxNzQyNjEwODY5fQ.wicC65ZsQ1R8Zb10NZLbyrX7QBf_XRj3i6VX3fZ3_68&t=2024-03-22T02%3A35%3A47.007Z',
       smallImages: [
         'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/cine/turandot/2.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvY2luZS90dXJhbmRvdC8yLnBuZyIsImlhdCI6MTcxMTA3NDg3NywiZXhwIjoxNzQyNjEwODc3fQ.xIMutxbpFQlEBt7DKNb3OHjJtyajrfg20TdK_ABPfls&t=2024-03-22T02%3A35%3A54.857Z',
-        'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/cine/turandot/2.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvY2luZS90dXJhbmRvdC8yLnBuZyIsImlhdCI6MTcxMTA3NDg3NywiZXhwIjoxNzQyNjEwODc3fQ.xIMutxbpFQlEBt7DKNb3OHjJtyajrfg20TdK_ABPfls&t=2024-03-22T02%3A35%3A54.857Z',
+        'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/cine/turandot/3.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvY2luZS90dXJhbmRvdC8zLnBuZyIsImlhdCI6MTcxMTA4Mzc3NywiZXhwIjoxNzQyNjE5Nzc3fQ._c65OtlMBoIEPNmicr27WXvpIDZSEidt9TcWYWJY4-M&t=2024-03-22T05%3A04%3A15.179Z',
         'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/cine/turandot/4.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvY2luZS90dXJhbmRvdC80LnBuZyIsImlhdCI6MTcxMTA3NDg5MSwiZXhwIjoxNzQyNjEwODkxfQ.FfL-W7ff_MGvwC7coG2SQNKiNRfz2j2cyErrT1TTRrM&t=2024-03-22T02%3A36%3A09.479Z',
       ],
     },
@@ -56,7 +56,7 @@ function Cine() {
       mainImage: 'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/cine/lucha/1.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvY2luZS9sdWNoYS8xLnBuZyIsImlhdCI6MTcxMTA3NDk3MiwiZXhwIjoxNzQyNjEwOTcyfQ.oXhWGsBSo5ld30diWxUIYSf-mi1YMy0LruSU4-mC1ZE&t=2024-03-22T02%3A37%3A30.822Z',
       smallImages: [
         'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/cine/lucha/2.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvY2luZS9sdWNoYS8yLnBuZyIsImlhdCI6MTcxMTA3NDk4MSwiZXhwIjoxNzQyNjEwOTgxfQ.JqpFEJZVPp2XHYAgfgKc7RQVJsI90t2f5RmHlOu6S2A&t=2024-03-22T02%3A37%3A39.022Z',
-        'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/cine/lucha/2.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvY2luZS9sdWNoYS8yLnBuZyIsImlhdCI6MTcxMTA3NDk4MSwiZXhwIjoxNzQyNjEwOTgxfQ.JqpFEJZVPp2XHYAgfgKc7RQVJsI90t2f5RmHlOu6S2A&t=2024-03-22T02%3A37%3A39.022Z',
+        'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/cine/lucha/3.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvY2luZS9sdWNoYS8zLnBuZyIsImlhdCI6MTcxMTA4MzU5NiwiZXhwIjoxNzQyNjE5NTk2fQ.gST4xGP5Bzc6w28iaoIaOmc8cDFMd4cgFRpcnQtfZHk&t=2024-03-22T05%3A01%3A14.475Z',
         'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/cine/lucha/4.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvY2luZS9sdWNoYS80LnBuZyIsImlhdCI6MTcxMTA3NDk5NCwiZXhwIjoxNzQyNjEwOTk0fQ.V_MRFUWJHennzOK8Q1olt2cREJ7BKLcT50RSyNZTmQY&t=2024-03-22T02%3A37%3A52.690Z',
       ],
     },
@@ -68,7 +68,7 @@ function Cine() {
       smallImages: [
         'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/cine/bailar/2.jpeg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvY2luZS9iYWlsYXIvMi5qcGVnIiwiaWF0IjoxNzExMDc0NzU1LCJleHAiOjE3NDI2MTA3NTV9.1wRcclkg2RbEP6mfxxdRwDdXXuCEECEY-9IadeW7CF0&t=2024-03-22T02%3A33%3A52.720Z',
         'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/cine/bailar/3.jpeg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvY2luZS9iYWlsYXIvMy5qcGVnIiwiaWF0IjoxNzExMDc0NzYxLCJleHAiOjE3NDI2MTA3NjF9.Q95FooHNyRVZ-j0NCniMdd2IljwR9310qkFRCc_LOtA&t=2024-03-22T02%3A33%3A59.755Z',
-        'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/cine/bailar/3.jpeg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvY2luZS9iYWlsYXIvMy5qcGVnIiwiaWF0IjoxNzExMDc0NzYxLCJleHAiOjE3NDI2MTA3NjF9.Q95FooHNyRVZ-j0NCniMdd2IljwR9310qkFRCc_LOtA&t=2024-03-22T02%3A33%3A59.755Z',
+        'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/cine/bailar/4.jpeg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvY2luZS9iYWlsYXIvNC5qcGVnIiwiaWF0IjoxNzExMDgzNTQ3LCJleHAiOjE3NDI2MTk1NDd9.JLToxI4T34eJB1tNouD8wOi0K2LKxV1diC7cI1CddnA&t=2024-03-22T05%3A00%3A25.107Z',
       ],
     },
     {
@@ -86,9 +86,9 @@ function Cine() {
       id:"4",
       title: "Amar es libertad",
       duration: "Cortrometraje Original",
-      mainImage: 'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/cine/bailar/3.jpeg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvY2luZS9iYWlsYXIvMy5qcGVnIiwiaWF0IjoxNzExMDc0NzYxLCJleHAiOjE3NDI2MTA3NjF9.Q95FooHNyRVZ-j0NCniMdd2IljwR9310qkFRCc_LOtA&t=2024-03-22T02%3A33%3A59.755Z',
+      mainImage: 'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/cine/amar/1.PNG?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvY2luZS9hbWFyLzEuUE5HIiwiaWF0IjoxNzExMDgzNzAwLCJleHAiOjE3NDI2MTk3MDB9.DDDWVmP6CxCVV1Ty6eHOxwbkuDqOTgLUCIU4Z6QNj_E&t=2024-03-22T05%3A02%3A57.816Z',
       smallImages: [
-        'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/cine/bailar/3.jpeg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvY2luZS9iYWlsYXIvMy5qcGVnIiwiaWF0IjoxNzExMDc0NzYxLCJleHAiOjE3NDI2MTA3NjF9.Q95FooHNyRVZ-j0NCniMdd2IljwR9310qkFRCc_LOtA&t=2024-03-22T02%3A33%3A59.755Z',
+        'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/cine/amar/2.PNG?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvY2luZS9hbWFyLzIuUE5HIiwiaWF0IjoxNzExMDgzNzE0LCJleHAiOjE3NDI2MTk3MTR9.aLWrDv_A1zGACBio7pGpT4sxs5BEmAzxoAgHWkG8aTc&t=2024-03-22T05%3A03%3A12.051Z',
         'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/cine/amar/3.PNG?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvY2luZS9hbWFyLzMuUE5HIiwiaWF0IjoxNzExMDc0ODIxLCJleHAiOjE3NDI2MTA4MjF9.SgQrfaLzEqOr0R4stIa1gGCEQDKb8FtIaPGHDb1E8xQ&t=2024-03-22T02%3A34%3A58.842Z',
         'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/cine/amar/4.PNG?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvY2luZS9hbWFyLzQuUE5HIiwiaWF0IjoxNzExMDc0ODMyLCJleHAiOjE3NDI2MTA4MzJ9.oEa221f-uhsj8-oH3Vx_IlMUCxRk3DuZFfkYAbR5u1c&t=2024-03-22T02%3A35%3A09.843Z',
       ],
