@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Nav.css";
-import logoImage from '../../assets/logos/LOGO_B.PNG';
+import logoImage from '../../assets/logos/logo.png';
 import { Link } from "react-router-dom";
 
 function Nav() {
@@ -21,7 +21,7 @@ function Nav() {
       />
       <div className="navbar">
         <Link to="/" onClick={toggleMenu}>
-          <img src={logoImage} alt="Logo" className="logo" style={{ width: "auto", height: "80px" }} />
+          <img src={logoImage} alt="Logo" className="logo" style={{ width: "auto", height: "40px" }} />
         </Link>
         <label htmlFor="active" className="menu-btn">
           <span></span>
