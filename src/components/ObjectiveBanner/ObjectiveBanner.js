@@ -37,7 +37,7 @@ const ObjectiveBanner = () => {
                 fontSize: { xs: "0.875rem", sm: "1rem", md: "1.125rem" },
               }}
             >
-              Materializar narrativas de alto impacto a través del sonido y la imagen. Escuchar las necesidades de nuestros clientes y nuestro equipo para entregar resultados persuasivos e inolvidables.RONDO es una compañía productora de ideas creativas. Contamos historias a través de la imagen audiovisual. Para transmitir emociones de una manera innovadora y arriesgada.
+              Materializar narrativas de alto impacto a través del sonido y la imagen. Escuchar las necesidades de nuestros clientes y nuestro equipo para entregar resultados persuasivos e inolvidables.
             </Typography>
           </Box>
         </Grid>
