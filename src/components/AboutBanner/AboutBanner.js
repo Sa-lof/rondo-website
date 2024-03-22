@@ -2,7 +2,6 @@ import React from 'react';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import AboutBannerPlaceholder from '../../assets/nosotros/NOSOTROS.jpg';
 
 const AboutBanner = () => {
   return (
@@ -27,7 +26,7 @@ const AboutBanner = () => {
             }}
           >
             <img
-              src={AboutBannerPlaceholder}
+              src='https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/nosotros/NOSOTROS.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvbm9zb3Ryb3MvTk9TT1RST1MuanBnIiwiaWF0IjoxNzExMDc0MTg4LCJleHAiOjE3NDI2MTAxODh9.AmsSXlV1f40f6AzXy87WEf8Cx89V92FfIG0apSwyM8c&t=2024-03-22T02%3A24%3A25.847Z'
               alt="About us banner"
             />
           </Box>

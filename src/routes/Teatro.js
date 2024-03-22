@@ -8,14 +8,6 @@ import Box from "@mui/material/Box";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import TeatroCard from "../components/TeatroCard/TeatroCard";
-import mainImageCuatro1 from '../assets/teatro/cu4tro/1.jpg';
-import mainImageCuatro2 from '../assets/teatro/cu4tro/2.jpg';
-import mainImageCuatro3 from '../assets/teatro/cu4tro/3.jpg';
-import mainImageCuatro4 from '../assets/teatro/cu4tro/4.jpg';
-import mainImageMama1 from '../assets/teatro/Mama/1.jpg';
-import mainImageMama2 from '../assets/teatro/Mama/2.jpg';
-import mainImageMama3 from '../assets/teatro/Mama/3.jpg';
-import mainImageMama4 from '../assets/teatro/Mama/4.jpg';
 import Footer from "../components/Footer/Footer";
 import { useNavigate } from 'react-router-dom'; // Añadir esta línea
 import loaderGif from '../assets/RONDO LOGO.gif';
@@ -36,11 +28,11 @@ function Teatro() {
       id:"1",
       title: "Cu4tro Cu4rtos",
       duration: "Producción original",
-      mainImage: mainImageCuatro1,
+      mainImage: 'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/teatro/cu4tro/1.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvdGVhdHJvL2N1NHRyby8xLmpwZyIsImlhdCI6MTcxMTA3NTIxMywiZXhwIjoxNzQyNjExMjEzfQ.Z6SPfZKaHKQ2HOuKJogQJ_gqaBcQlCGURzc977im64E&t=2024-03-22T02%3A41%3A31.546Z',
       smallImages: [
-        mainImageCuatro2,
-        mainImageCuatro3,
-        mainImageCuatro4,
+        'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/teatro/cu4tro/2.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvdGVhdHJvL2N1NHRyby8yLmpwZyIsImlhdCI6MTcxMTA3NTIzMywiZXhwIjoxNzQyNjExMjMzfQ.axPaiiJ-O8LFadQ83RbOg52-s81BBYrF3HrLLNwWq2c&t=2024-03-22T02%3A41%3A51.134Z',
+        'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/teatro/cu4tro/3.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvdGVhdHJvL2N1NHRyby8zLmpwZyIsImlhdCI6MTcxMTA3NTI0MiwiZXhwIjoxNzQyNjExMjQyfQ.AVxnC9Afq3Zsd2xvZAqdx1azYvUUNpJMi3tr1DnuG0Q&t=2024-03-22T02%3A42%3A00.249Z',
+        'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/teatro/cu4tro/4.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvdGVhdHJvL2N1NHRyby80LmpwZyIsImlhdCI6MTcxMTA3NTI1MSwiZXhwIjoxNzQyNjExMjUxfQ.FFKoM7uc9_DmJgKCKzQ7M2jqNjD0d68GR5SiGCsJrqo&t=2024-03-22T02%3A42%3A09.236Z',
       ],
       ano: "2022",
     },
@@ -48,11 +40,11 @@ function Teatro() {
       id:"2",
       title: "Mamá se fue a la luna",
       duration: "Musicalización",
-      mainImage: mainImageMama1,
+      mainImage: 'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/teatro/mama/1.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvdGVhdHJvL21hbWEvMS5qcGciLCJpYXQiOjE3MTEwNzUxNDksImV4cCI6MTc0MjYxMTE0OX0.PbGwjApV3iHqDwXkviJ5wklLEKgEnWrkUlykZyojs18&t=2024-03-22T02%3A40%3A27.640Z',
       smallImages: [
-        mainImageMama2,
-        mainImageMama3,
-        mainImageMama4,
+        'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/teatro/mama/2.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvdGVhdHJvL21hbWEvMi5qcGciLCJpYXQiOjE3MTEwNzUxNTgsImV4cCI6MTc0MjYxMTE1OH0.2RU9eLGeUAyPXN3qKM_GLGZlcdd9hE00odlhMf35VPU&t=2024-03-22T02%3A40%3A36.175Z',
+        'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/teatro/mama/3.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvdGVhdHJvL21hbWEvMy5qcGciLCJpYXQiOjE3MTEwNzUxNjYsImV4cCI6MTc0MjYxMTE2Nn0.sqUKp8SsVTaH8oKuZcKmCOiU5WpyrKRHV7pxNNk84-M&t=2024-03-22T02%3A40%3A44.636Z',
+        'https://axgsqowkqvumwqhilzkk.supabase.co/storage/v1/object/sign/rondo-assets/teatro/mama/4.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJyb25kby1hc3NldHMvdGVhdHJvL21hbWEvNC5qcGciLCJpYXQiOjE3MTEwNzUxNzgsImV4cCI6MTc0MjYxMTE3OH0.qFlfcjIlZPEYpoRfKhNQ-pOSmHmcX1tSfkybDRGgUj4&t=2024-03-22T02%3A40%3A55.799Z',
       ],
       ano: "2022",
     },
@@ -63,7 +55,7 @@ function Teatro() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2500); 
+    }, 1500); 
 
     return () => clearTimeout(timer);
   }, []);
