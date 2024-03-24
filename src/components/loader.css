@@ -1,4 +1,3 @@
-/* Contenedor del loader para centrarlo */
 .loader-container {
     display: flex;
     justify-content: center;
@@ -14,7 +13,7 @@
   
   .loader {
       width: 100px;
-      height: 100px; /* Ajuste agregado para mantener la proporción si cambias width */
+      height: 100px;
       aspect-ratio: 1;
       --g: #0000 calc(100% - 5px), #000 calc(100% - 3px) 93%, #0000;
       background: 
@@ -30,3 +29,13 @@
     100% {transform: rotate(1turn)}
   }
 
+
+  .navbar {
+    position: relative; 
+    z-index: 10;
+    background-color: white;
+  }
+  
+  .video-container {
+    z-index: 1;
+  }
