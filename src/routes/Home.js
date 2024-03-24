@@ -26,15 +26,24 @@ function Home() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Nav />
+      <Nav className="navbar" />
       {loading && (
         <div className="loader-container">
           <img src={loaderGif} alt="Cargando..." style={{ width: "200px", height: "200px" }} />
         </div>
       )}
-      <div style={{ visibility: loading ? "hidden" : "visible", padding: "56.25% 0 0 0", position: "relative" }}>
-        <video 
-          style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} 
+      <div className="video-container" style={{ visibility: loading ? "hidden" : "visible", padding: "56.25% 0 0 0", position: "relative" }}>
+      <video 
+          style={{
+            position: "fixed", 
+            top: 0,
+            left: 0,
+            minWidth: "100vw", 
+            minHeight: "100vh",
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+          }} 
           controls
           autoPlay
           loop
