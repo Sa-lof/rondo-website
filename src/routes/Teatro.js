@@ -111,7 +111,7 @@ function Teatro() {
                   fontWeight: "bold",
                 }}
               >
-                “El teatro no se hace para cantar las cosas sino para cambiarlas"
+                “El teatro no se hace para contar las cosas sino para cambiarlas"
               </Typography>
               <Typography
                 variant="subtitle1"
